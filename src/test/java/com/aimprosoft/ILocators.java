@@ -52,6 +52,7 @@ public interface ILocators {
     String RIGHT_PANEL = "//div[@class='right-control-panel']";
     String MIDDL = "//div[@id='chat-scroll4']";
     String FOOTER = "//div[@class='footer']";
+    //Left panel
     String USR_MENU = "//div[@class='dropdown-user-menu']";
     String ROOM_LIST = "//a[contains(text(),'Rooms')]";
     String DIRECT_L = "//div[@class='left-panel']//div//div[2]//h2[1]";
@@ -68,13 +69,28 @@ public interface ILocators {
     String NP_SEARCH = "//input[@placeholder='Go to room']";
     String NP_CLOSE = "//i[contains(text(),'highlight_off')]";
     //Header
-    String H_ROOM_NAME = "//div[@class='channel-name room-public'][contains(text(),'$1')]";
     String H_TITLE = "//div[@class='channel-title']";
+    String H_CNTRL = "//div[@class='b-chat-header_controls-wrap']";
     String H_SEARCH = "//input[@placeholder='Search...']";
+    String H_ROOM_NAME = "//div[@class='channel-room-name']";
+    String H_TEAM = "//div[@id='service-block-toggle']";
+    //Right panel
+    String RP_ROOM_MEMBERS = "//i[contains(text(),'supervisor_account')]";
+    String RP_PINNED_MESS = "//*[contains(@fill,'#1f2d33')]";
+    String RP_STARRED_MESS = "//i[contains(text(),'star_border')]";
+    String RP_UPLOADED_FILES = "//i[contains(text(),'file_upload')]";
+    String RP_ROOM_SETTINGS = "//i[contains(@class,'material-icons 32 md-dark')][contains(text(),'settings')]";
+    //Footer
+    String F_INPUT_TEXT = "//textarea[@id='input-text-field']";
+    String F_UPLOAD = "//div[@class='button-input']";
+    String F_STICKERS = "//div[@id='sticker_form']";
+    String F_EMOJI = "//div[@id='emo_form']";
 
 
+    //String ="";
 
 
+    //User menu
     String PROFILE = "//span[contains(text(),'Profile')]";
     String SIGN_OUT = "//span[contains(text(),'Sign out')]";
     String JOIN_AT = "//span[contains(text(),'Join another team')]";

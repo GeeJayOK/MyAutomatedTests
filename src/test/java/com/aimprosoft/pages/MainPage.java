@@ -90,4 +90,48 @@ public class MainPage extends PageObject {
     public boolean checkThatCloseButtonNavPanelIsPresent() {
         return $(ILocators.NP_CLOSE).isDisplayed();
     }
+
+    public boolean checkThatChannelTitleIsPresent() {
+        return $(ILocators.H_TITLE).isDisplayed();
+    }
+
+    public boolean checkThatHeaderControlIsPresent() {
+        return $(ILocators.H_CNTRL).isDisplayed();
+    }
+
+    public boolean checkThatRoomMembersButtonIsPresent() {
+        return $(ILocators.RP_ROOM_MEMBERS).isDisplayed();
+    }
+
+    public boolean checkThatPinnedMessagesButtonIsPresent() {
+        return $(ILocators.RP_PINNED_MESS).isDisplayed();
+    }
+
+    public boolean checkThatStarredMessagesButtonIsPresent() {
+        return $(ILocators.RP_STARRED_MESS).isDisplayed();
+    }
+
+    public boolean checkThatUploadedFilesButtonIsPresent() {
+        return $(ILocators.RP_UPLOADED_FILES).isDisplayed();
+    }
+
+    public boolean checkThatRoomSettingsIsPresent() {
+        return $(ILocators.RP_ROOM_SETTINGS).isDisplayed();
+    }
+
+    public boolean checkThatInputTextFieldIsPresent() {
+        return $(ILocators.F_INPUT_TEXT).isDisplayed();
+    }
+
+    public boolean checkThatUploadButtonIsPresent() {
+        return $(ILocators.F_UPLOAD).isDisplayed();
+    }
+
+    public boolean checkThatStickersButtonIsPresent() {
+        return $(ILocators.F_STICKERS).isDisplayed();
+    }
+
+    public boolean checkThatEmojiButtonIsPresent() {
+        return $(ILocators.F_EMOJI).isDisplayed();
+    }
 }

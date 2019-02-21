@@ -489,5 +489,58 @@ public class EndUserSteps {
         Assert.assertTrue("Close Button Nav Panel Is Not Present", mainPage.checkThatCloseButtonNavPanelIsPresent());
     }
 
+    @Step
+    public void checkThatChannelTitleIsPresent() {
+        Assert.assertTrue("Channel Title Is Not Present", mainPage.checkThatChannelTitleIsPresent());
+    }
 
+    @Step
+    public void checkThatHeaderControlIsPresent() {
+        Assert.assertTrue("Header Control Is Not Present", mainPage.checkThatHeaderControlIsPresent());
+    }
+
+    @Step
+    public void checkThatRoomMembersButtonIsPresent() {
+        Assert.assertTrue("Room Members Button Is Not Present", mainPage.checkThatRoomMembersButtonIsPresent());
+    }
+
+    @Step
+    public void checkThatPinnedMessagesButtonIsPresent() {
+        Assert.assertTrue("Pinned Messages Button Is Not Present", mainPage.checkThatPinnedMessagesButtonIsPresent());
+    }
+
+    @Step
+    public void checkThatStarredMessagesButtonIsPresent() {
+        Assert.assertTrue("Starred Messages Button Is Not Present", mainPage.checkThatStarredMessagesButtonIsPresent());
+    }
+
+    @Step
+    public void checkThatUploadedFilesButtonIsPresent() {
+        Assert.assertTrue("Uploaded Files Button Is Not Present", mainPage.checkThatUploadedFilesButtonIsPresent());
+    }
+
+    @Step
+    public void checkThatRoomSettingsIsPresent() {
+        Assert.assertTrue("Room Settings Is Not Present", mainPage.checkThatRoomSettingsIsPresent());
+    }
+
+    @Step
+    public void checkThatInputTextFieldIsPresent() {
+        Assert.assertTrue("Input Text Field Is Not Present", mainPage.checkThatInputTextFieldIsPresent());
+    }
+
+    @Step
+    public void checkThatUploadButtonIsPresent() {
+        Assert.assertTrue("Upload Button Is Present", mainPage.checkThatUploadButtonIsPresent());
+    }
+
+    @Step
+    public void checkThatStickersButtonIsPresent() {
+        Assert.assertTrue("Stickers Button Is Not Present", mainPage.checkThatStickersButtonIsPresent());
+    }
+
+    @Step
+    public void checkThatEmojiButtonIsPresent() {
+        Assert.assertTrue("Emoji Button Is Not Present", mainPage.checkThatEmojiButtonIsPresent());
+    }
 }

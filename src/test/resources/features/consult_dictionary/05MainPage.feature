@@ -75,12 +75,33 @@ Feature: Testing of Main page
     And User clicks on the SIGN IN button
     And Wait for loader
     Then Authorization is successful
-    And Check that '' is present
-    And Check that '' is present
-    And Check that '' is present
+    And Check that 'Channel-title' is present
+    And Check that 'Header control' is present
 
+  Scenario: 06.0008 Visual check 'Right panel'
+    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Then User is on the Authorization page
+    When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
+    And User clicks on the SIGN IN button
+    And Wait for loader
+    Then Authorization is successful
+    And Check that 'Room members' button is present
+    And Check that 'Pinned messages' button is present
+    And Check that 'Starred messages' button is present
+    And Check that 'Uploaded files' button is present
+    And Check that 'Room settings' is present
 
-
+  Scenario: 06.0010 Input text field (visual check)
+    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Then User is on the Authorization page
+    When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
+    And User clicks on the SIGN IN button
+    And Wait for loader
+    Then Authorization is successful
+    And Check that 'Input text' field is present
+    And Check that 'Upload' button is present
+    And Check that 'Stickers' button is present
+    And Check that 'Emoji' button is present
 
 
 

@@ -488,4 +488,59 @@ public class DefinitionSteps {
     public void checkThatCloseButtonNavPanelIsPresent() {
         steps.checkThatCloseButtonNavPanelIsPresent();
     }
+
+    @And("^Check that 'Channel-title' is present$")
+    public void checkThatChannelTitleIsPresent() {
+        steps.checkThatChannelTitleIsPresent();
+    }
+
+    @And("^Check that 'Header control' is present$")
+    public void checkThatHeaderControlIsPresent() {
+        steps.checkThatHeaderControlIsPresent();
+    }
+
+    @And("^Check that 'Room members' button is present$")
+    public void checkThatRoomMembersButtonIsPresent() {
+        steps.checkThatRoomMembersButtonIsPresent();
+    }
+
+    @And("^Check that 'Pinned messages' button is present$")
+    public void checkThatPinnedMessagesButtonIsPresent() {
+        steps.checkThatPinnedMessagesButtonIsPresent();
+    }
+
+    @And("^Check that 'Starred messages' button is present$")
+    public void checkThatStarredMessagesButtonIsPresent() {
+        steps.checkThatStarredMessagesButtonIsPresent();
+    }
+
+    @And("^Check that 'Uploaded files' button is present$")
+    public void checkThatUploadedFilesButtonIsPresent() {
+        steps.checkThatUploadedFilesButtonIsPresent();
+    }
+
+    @And("^Check that 'Room settings' is present$")
+    public void checkThatRoomSettingsIsPresent() {
+        steps.checkThatRoomSettingsIsPresent();
+    }
+
+    @And("^Check that 'Input text' field is present$")
+    public void checkThatInputTextFieldIsPresent() {
+        steps.checkThatInputTextFieldIsPresent();
+    }
+
+    @And("^Check that 'Upload' button is present$")
+    public void checkThatUploadButtonIsPresent() {
+        steps.checkThatUploadButtonIsPresent();
+    }
+
+    @And("^Check that 'Stickers' button is present$")
+    public void checkThatStickersButtonIsPresent() {
+        steps.checkThatStickersButtonIsPresent();
+    }
+
+    @And("^Check that 'Emoji' button is present$")
+    public void checkThatEmojiButtonIsPresent() {
+        steps.checkThatEmojiButtonIsPresent();
+    }
 }
