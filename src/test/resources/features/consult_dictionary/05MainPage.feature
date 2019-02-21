@@ -65,11 +65,10 @@ Feature: Testing of Main page
     And User clicks on the SIGN IN button
     And Wait for loader
     Then Authorization is successful
-    And Check that '' is present
-    And Check that '' is present
-    And Check that '' is present
+    And Check that 'Search navigation panel' is present
+    And Check that 'Close' button nav panel is present
 
-  Scenario: 06.0007 Visual check 'Header container'
+  Scenario: 06.0007 Visual check 'Header'
     Given User go to the "https://192.168.217.23/index.html#/login" page
     Then User is on the Authorization page
     When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"

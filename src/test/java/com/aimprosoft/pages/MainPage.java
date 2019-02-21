@@ -82,4 +82,12 @@ public class MainPage extends PageObject {
     public boolean checkThatGeneralRoomIsPresent() {
         return $(ILocators.GENERAL).isDisplayed();
     }
+
+    public boolean checkThatSearchNavigationPanelIsPresent() {
+        return $(ILocators.NP_SEARCH).isDisplayed();
+    }
+
+    public boolean checkThatCloseButtonNavPanelIsPresent() {
+        return $(ILocators.NP_CLOSE).isDisplayed();
+    }
 }

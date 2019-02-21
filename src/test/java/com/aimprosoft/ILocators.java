@@ -65,6 +65,8 @@ public interface ILocators {
     String DIRECT = "//a[contains(text(),'Direct')]";
     String ADD_DIRECT = "//a[@class='add-direct-button']";
     String GENERAL = "//span[contains(text(),'General')]";
+    String NP_SEARCH = "//input[@placeholder='Go to room']";
+    String NP_CLOSE = "//i[contains(text(),'highlight_off')]";
     //Header
     String H_ROOM_NAME = "//div[@class='channel-name room-public'][contains(text(),'$1')]";
     String H_TITLE = "//div[@class='channel-title']";

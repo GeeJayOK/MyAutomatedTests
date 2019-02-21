@@ -478,4 +478,14 @@ public class DefinitionSteps {
     public void checkThatGeneralRoomIsPresent() {
         steps.checkThatGeneralRoomIsPresent();
     }
+
+    @And("^Check that 'Search navigation panel' is present$")
+    public void checkThatSearchNavigationPanelIsPresent() {
+        steps.checkThatSearchNavigationPanelIsPresent();
+    }
+
+    @And("^Check that 'Close' button nav panel is present$")
+    public void checkThatCloseButtonNavPanelIsPresent() {
+        steps.checkThatCloseButtonNavPanelIsPresent();
+    }
 }

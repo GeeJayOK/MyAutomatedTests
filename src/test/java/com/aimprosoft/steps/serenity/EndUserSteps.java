@@ -476,6 +476,18 @@ public class EndUserSteps {
 
     @Step
     public void checkThatGeneralRoomIsPresent() {
-    Assert.assertTrue("General Room Is Not Present",mainPage.checkThatGeneralRoomIsPresent());
+        Assert.assertTrue("General Room Is Not Present", mainPage.checkThatGeneralRoomIsPresent());
     }
+
+    @Step
+    public void checkThatSearchNavigationPanelIsPresent() {
+        Assert.assertTrue("Search Navigation Panel Is Not Present", mainPage.checkThatSearchNavigationPanelIsPresent());
+    }
+
+    @Step
+    public void checkThatCloseButtonNavPanelIsPresent() {
+        Assert.assertTrue("Close Button Nav Panel Is Not Present", mainPage.checkThatCloseButtonNavPanelIsPresent());
+    }
+
+
 }
