@@ -43,10 +43,6 @@ public class MainPage extends PageObject {
         return $(ILocators.NAV_PANEL).isDisplayed();
     }
 
-    public void userClicksOnTheUserMenu() {
-        $(ILocators.USR_MENU).click();
-    }
-
     public boolean checkThatTeamNameIsPresent() {
         return $(ILocators.TEAMNAME).isDisplayed();
     }
@@ -133,5 +129,25 @@ public class MainPage extends PageObject {
 
     public boolean checkThatEmojiButtonIsPresent() {
         return $(ILocators.F_EMOJI).isDisplayed();
+    }
+
+    public void userClicksOnTheUserMenu() {
+        $(ILocators.USR_MENU).click();
+    }
+
+    public boolean checkThatProfileButtonIsPresent() {
+        return $(ILocators.UM_PROFILE).isDisplayed();
+    }
+
+    public boolean checkThatSignOutButtonIsPresent() {
+        return $(ILocators.UM_SIGN_OUT).isDisplayed();
+    }
+
+    public boolean checkThatJoinAnotherTeamButtonIsPresent() {
+        return $(ILocators.UM_JOIN_AT).isDisplayed();
+    }
+
+    public boolean checkThatDownloadAppButtonIsPresent() {
+        return $(ILocators.UM_DOWNLOAD).isDisplayed();
     }
 }

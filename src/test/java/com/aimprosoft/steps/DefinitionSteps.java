@@ -429,11 +429,6 @@ public class DefinitionSteps {
         steps.checkThatNavigationPanelIsPresent();
     }
 
-    @Then("^User clicks on the 'User menu'$")
-    public void userClicksOnTheUserMenu() {
-        steps.userClicksOnTheUserMenu();
-    }
-
     @And("^Check that 'Team name' is present$")
     public void checkThatTeamNameIsPresent() {
         steps.checkThatTeamNameIsPresent();
@@ -542,5 +537,30 @@ public class DefinitionSteps {
     @And("^Check that 'Emoji' button is present$")
     public void checkThatEmojiButtonIsPresent() {
         steps.checkThatEmojiButtonIsPresent();
+    }
+
+    @Then("^User clicks on the 'User menu'$")
+    public void userClicksOnTheUserMenu() {
+        steps.userClicksOnTheUserMenu();
+    }
+
+    @And("^Check that 'Profile' button is present$")
+    public void checkThatProfileButtonIsPresent() {
+        steps.checkThatProfileButtonIsPresent();
+    }
+
+    @And("^Check that 'Sign out' button is present$")
+    public void checkThatSignOutButtonIsPresent() {
+        steps.checkThatSignOutButtonIsPresent();
+    }
+
+    @And("^Check that 'Join another team' button is present$")
+    public void checkThatJoinAnotherTeamButtonIsPresent() {
+        steps.checkThatJoinAnotherTeamButtonIsPresent();
+    }
+
+    @And("^Check that 'Download App' button is present$")
+    public void checkThatDownloadAppButtonIsPresent() {
+        steps.checkThatDownloadAppButtonIsPresent();
     }
 }

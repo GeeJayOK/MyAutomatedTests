@@ -6,6 +6,8 @@ import cucumber.api.java.bs.A;
 import net.thucydides.core.annotations.Step;
 import org.junit.Assert;
 
+import java.lang.reflect.AccessibleObject;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.junit.Assert.*;
@@ -430,11 +432,6 @@ public class EndUserSteps {
     }
 
     @Step
-    public void userClicksOnTheUserMenu() {
-        mainPage.userClicksOnTheUserMenu();
-    }
-
-    @Step
     public void checkThatTeamNameIsPresent() {
         Assert.assertTrue("Team Name Is Not Present", mainPage.checkThatTeamNameIsPresent());
     }
@@ -542,5 +539,30 @@ public class EndUserSteps {
     @Step
     public void checkThatEmojiButtonIsPresent() {
         Assert.assertTrue("Emoji Button Is Not Present", mainPage.checkThatEmojiButtonIsPresent());
+    }
+
+    @Step
+    public void userClicksOnTheUserMenu() {
+        mainPage.userClicksOnTheUserMenu();
+    }
+
+    @Step
+    public void checkThatProfileButtonIsPresent() {
+        Assert.assertTrue("Profile Button Is Not Present", mainPage.checkThatProfileButtonIsPresent());
+    }
+
+    @Step
+    public void checkThatSignOutButtonIsPresent() {
+        Assert.assertTrue("Sign Out Button Is Not Present", mainPage.checkThatSignOutButtonIsPresent());
+    }
+
+    @Step
+    public void checkThatJoinAnotherTeamButtonIsPresent() {
+        Assert.assertTrue("Join Another Team Button Is Not Present", mainPage.checkThatJoinAnotherTeamButtonIsPresent());
+    }
+
+    @Step
+    public void checkThatDownloadAppButtonIsPresent() {
+        Assert.assertTrue("Download App Button Is Present", mainPage.checkThatDownloadAppButtonIsPresent());
     }
 }

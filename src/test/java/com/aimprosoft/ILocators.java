@@ -85,15 +85,13 @@ public interface ILocators {
     String F_UPLOAD = "//div[@class='button-input']";
     String F_STICKERS = "//div[@id='sticker_form']";
     String F_EMOJI = "//div[@id='emo_form']";
-
+    //User menu
+    String UM_PROFILE = "//span[contains(text(),'Profile')]";
+    String UM_SIGN_OUT = "//span[contains(text(),'Sign out')]";
+    String UM_JOIN_AT = "//span[contains(text(),'Join another team')]";
+    String UM_DOWNLOAD = "//span[@class='download']";
 
     //String ="";
 
-
-    //User menu
-    String PROFILE = "//span[contains(text(),'Profile')]";
-    String SIGN_OUT = "//span[contains(text(),'Sign out')]";
-    String JOIN_AT = "//span[contains(text(),'Join another team')]";
-    String DOWNLOAD = "//span[@class='download']";
 
 }
