@@ -1,7 +1,7 @@
 package com.aimprosoft;
 
 public interface ILocators {
-    /*Registration page1*/
+    //Registration page1
     String TITTLE_RP = "//div[@class='text-center']";
     String EMAIL_FIELD = "//input[@placeholder='Email']";
     String SUBMIT_BUTTON = "//button[@type='submit']";
@@ -9,7 +9,7 @@ public interface ILocators {
     String BTA_LINK = "//a[contains(text(),'Back to authorization')]";
     String ERROR_MESS = "(//div[.='$1'])[4]";
 
-    /*Registration page2*/
+    //Registration page2
     String EMAIL_BLOCK = "//input[@placeholder='Email']";
     String SEND_AGAIN = "//a[@class='send-again']";
     String CONF_CODE_TXT = "//span[@class='confirm-code-status']";
@@ -19,7 +19,7 @@ public interface ILocators {
     String PASS2 = "//div//div[4]//div[1]//input[1]";
     String ERROR2 = "//div[@class='inputs-wrapper']//div//div[3]//div[1]//div[1]";
 
-    /*Login page*/
+    //Login page
     String LOG_PAGE = "//span[contains(text(),'Sign')]";
     String PASS = "//input[@placeholder='Password']";
     String REM_ME = "//label[@class='login-check-text']";
@@ -35,7 +35,7 @@ public interface ILocators {
     String CHECK_CIRKLE = "//i[contains(@class,'material-icons 25 md-dark')]";
     String SHOW_PASS = "//span[@class='password-show']";
 
-    /*PasswordRecovery pages*/
+    //PasswordRecovery pages
     String RECOVERY_PAGE1 = "//h1[contains(text(),'Forgot password?')]";
     String RECOVERY_PAGE2 = "//strong[contains(text(),'Generated password or your own')]";
     String SRI_BUTT = "//button[@id='submit-recovery-request']";
@@ -91,6 +91,8 @@ public interface ILocators {
     String UM_JOIN_AT = "//span[contains(text(),'Join another team')]";
     String UM_DOWNLOAD = "//span[@class='download']";
 
+
+    //String  = "//h1[contains(text(),'Edit your profile')]";
     //String ="";
 
 
