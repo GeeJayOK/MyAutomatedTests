@@ -91,8 +91,19 @@ public interface ILocators {
     String UM_JOIN_AT = "//span[contains(text(),'Join another team')]";
     String UM_DOWNLOAD = "//span[@class='download']";
 
+    //Profile page
+    String PROFILE_PAGE= "//h1[contains(text(),'Edit your profile')]";
+    String PRF_FIRST_NAME = "//input[@name='firstName']";
+    String PRF_LAST_NAME = "//input[@name='lastName']";
+    String PRF_PHONE = "//input[@name='phone']";
+    String PRF_SKYPE = "//input[@name='skype']";
+    String PRF_WHTIDO = "//input[@name='whatIDo']";
+    String PRF_WHRIM = "//input[@name='whereIAm']";
+    String PRF_TIMEZONE = "//select[@name='timezoneProfile']";
+    String PRF_SAVE = "//button[@type='button']";
+    String PRF_CHGAVATAR = "//label[contains(@class,'btn btn-default')]";
 
-    //String  = "//h1[contains(text(),'Edit your profile')]";
+
     //String ="";
 
 

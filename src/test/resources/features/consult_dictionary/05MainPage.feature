@@ -115,3 +115,14 @@ Feature: Testing of Main page
     And Check that 'Sign out' button is present
     And Check that 'Join another team' button is present
     And Check that 'Download App' button is present
+
+  Scenario: 07.0002 Check 'Profile' item in drop-down user menu
+    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Then User is on the Authorization page
+    When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
+    And User clicks on the SIGN IN button
+    And Wait for loader
+    Then Authorization is successful
+    Then User clicks on the 'User menu'
+    And  User clicks on the 'Profile' button
+    Then 'Profile' page is opened

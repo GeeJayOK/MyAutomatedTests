@@ -563,4 +563,14 @@ public class DefinitionSteps {
     public void checkThatDownloadAppButtonIsPresent() {
         steps.checkThatDownloadAppButtonIsPresent();
     }
+
+    @And("^User clicks on the 'Profile' button$")
+    public void userClicksOnTheProfileButton() {
+        steps.userClicksOnTheProfileButton();
+    }
+
+    @Then("^'Profile' page is opened$")
+    public void profilePageIsOpened() {
+        steps.profilePageIsOpened();
+    }
 }

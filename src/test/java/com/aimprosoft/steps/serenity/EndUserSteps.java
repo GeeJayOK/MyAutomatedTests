@@ -21,6 +21,7 @@ public class EndUserSteps {
     CommonElements commonElements;
     PasswordRecovery passwordRecovery;
     MainPage mainPage;
+    ProfilePage profilePage;
 
     @Step
     public void userGoToThePage(String arg0) {
@@ -564,5 +565,14 @@ public class EndUserSteps {
     @Step
     public void checkThatDownloadAppButtonIsPresent() {
         Assert.assertTrue("Download App Button Is Present", mainPage.checkThatDownloadAppButtonIsPresent());
+    }
+
+    @Step
+    public void userClicksOnTheProfileButton() {
+        profilePage.userClicksOnTheProfileButton();
+    }
+@Step
+    public void profilePageIsOpened() {
+    Assert.assertTrue("profile Page Is Not Opened", profilePage.profilePageIsOpened());
     }
 }
