@@ -571,8 +571,74 @@ public class EndUserSteps {
     public void userClicksOnTheProfileButton() {
         profilePage.userClicksOnTheProfileButton();
     }
-@Step
+
+    @Step
     public void profilePageIsOpened() {
-    Assert.assertTrue("profile Page Is Not Opened", profilePage.profilePageIsOpened());
+        Assert.assertTrue("profile Page Is Not Opened", profilePage.profilePageIsOpened());
+    }
+
+    @Step
+    public void checkThatProfileIsPresent() {
+        Assert.assertTrue("Profile Is Not Present", profilePage.checkThatProfileIsPresent());
+    }
+
+    @Step
+    public void checkThatAccountSettingsIsPresent() {
+        Assert.assertTrue("Account Settings Is Not Present", profilePage.checkThatAccountSettingsIsPresent());
+    }
+
+    @Step
+    public void checkThatNotificationSettingsIsPresent() {
+        Assert.assertTrue("Notification Settings Is Not Present", profilePage.checkThatNotificationSettingsIsPresent());
+    }
+
+    @Step
+    public void checkThatFirstNameIsPresent() {
+        Assert.assertTrue("First Name Is Not Present", profilePage.checkThatFirstNameIsPresent());
+    }
+
+    @Step
+    public void checkThatLastNameIsPresent() {
+        Assert.assertTrue("Last Name Is Not Present", profilePage.checkThatLastNameIsPresent());
+    }
+
+    @Step
+    public void checkThatPhoneNumberIsPresent() {
+        Assert.assertTrue("Phone Number Is Not Present", profilePage.checkThatPhoneNumberIsPresent());
+    }
+
+    @Step
+    public void checkThatSkypeIsPresent() {
+        Assert.assertTrue("Skype Is Not Present", profilePage.checkThatSkypeIsPresent());
+    }
+
+    @Step
+    public void checkThatWhatIDoIsPresent() {
+        Assert.assertTrue("What I Do Is Not Present", profilePage.checkThatWhatIDoIsPresent());
+    }
+
+    @Step
+    public void checkThatWhereIAmIsPresent() {
+        Assert.assertTrue("Where I Am Is Not Present", profilePage.checkThatWhereIAmIsPresent());
+    }
+
+    @Step
+    public void checkThatTimeZoneIsPresent() {
+        Assert.assertTrue("Time Zone Is Not Present", profilePage.checkThatTimeZoneIsPresent());
+    }
+
+    @Step
+    public void checkThatAvatarBigIsPresent() {
+        Assert.assertTrue("Avatar Big Is Not Present", profilePage.checkThatAvatarBigIsPresent());
+    }
+
+    @Step
+    public void checkThatChangeAvatarButtonIsPresent() {
+        Assert.assertTrue("Change Avatar Button Is Not Present", profilePage.checkThatChangeAvatarButtonIsPresent());
+    }
+
+    @Step
+    public void checkThatSaveButtonIsPresent() {
+        Assert.assertTrue("Save Button Is Not Present", profilePage.checkThatSaveButtonIsPresent());
     }
 }

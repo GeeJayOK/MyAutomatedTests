@@ -92,7 +92,7 @@ public interface ILocators {
     String UM_DOWNLOAD = "//span[@class='download']";
 
     //Profile page
-    String PROFILE_PAGE= "//h1[contains(text(),'Edit your profile')]";
+    String PROFILE_PAGE = "//h1[contains(text(),'Edit your profile')]";
     String PRF_FIRST_NAME = "//input[@name='firstName']";
     String PRF_LAST_NAME = "//input[@name='lastName']";
     String PRF_PHONE = "//input[@name='phone']";
@@ -101,10 +101,12 @@ public interface ILocators {
     String PRF_WHRIM = "//input[@name='whereIAm']";
     String PRF_TIMEZONE = "//select[@name='timezoneProfile']";
     String PRF_SAVE = "//button[@type='button']";
+    String PRF_AVATAR = "//img[@class='img-responsive']";
     String PRF_CHGAVATAR = "//label[contains(@class,'btn btn-default')]";
 
+    String PROFILE_SET = "//div[@class='settings-item active']";
+    String ACC_SET = "//div[contains(text(),'Account settings')]";
+    String NOTIF_SET = "//div[contains(text(),'Notification settings')]";
 
     //String ="";
-
-
 }

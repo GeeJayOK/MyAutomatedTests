@@ -573,4 +573,69 @@ public class DefinitionSteps {
     public void profilePageIsOpened() {
         steps.profilePageIsOpened();
     }
+
+    @And("^Check that 'Profile' is present$")
+    public void checkThatProfileIsPresent() {
+        steps.checkThatProfileIsPresent();
+    }
+
+    @And("^Check that 'Account settings' is present$")
+    public void checkThatAccountSettingsIsPresent() {
+        steps.checkThatAccountSettingsIsPresent();
+    }
+
+    @And("^Check that 'Notification settings' is present$")
+    public void checkThatNotificationSettingsIsPresent() {
+        steps.checkThatNotificationSettingsIsPresent();
+    }
+
+    @And("^Check that 'First Name' is present$")
+    public void checkThatFirstNameIsPresent() {
+        steps.checkThatFirstNameIsPresent();
+    }
+
+    @And("^Check that 'Last Name' is present$")
+    public void checkThatLastNameIsPresent() {
+        steps.checkThatLastNameIsPresent();
+    }
+
+    @And("^Check that 'Phone number' is present$")
+    public void checkThatPhoneNumberIsPresent() {
+        steps.checkThatPhoneNumberIsPresent();
+    }
+
+    @And("^Check that 'Skype' is present$")
+    public void checkThatSkypeIsPresent() {
+        steps.checkThatSkypeIsPresent();
+    }
+
+    @And("^Check that 'What I do' is present$")
+    public void checkThatWhatIDoIsPresent() {
+        steps.checkThatWhatIDoIsPresent();
+    }
+
+    @And("^Check that 'Where I am' is present$")
+    public void checkThatWhereIAmIsPresent() {
+        steps.checkThatWhereIAmIsPresent();
+    }
+
+    @And("^Check that 'Time Zone' is present$")
+    public void checkThatTimeZoneIsPresent() {
+        steps.checkThatTimeZoneIsPresent();
+    }
+
+    @And("^Check that 'Avatar big' is present$")
+    public void checkThatAvatarBigIsPresent() {
+        steps.checkThatAvatarBigIsPresent();
+    }
+
+    @And("^Check that 'Change avatar' button is present$")
+    public void checkThatChangeAvatarButtonIsPresent() {
+        steps.checkThatChangeAvatarButtonIsPresent();
+    }
+
+    @And("^Check that 'Save' button is present$")
+    public void checkThatSaveButtonIsPresent() {
+        steps.checkThatSaveButtonIsPresent();
+    }
 }

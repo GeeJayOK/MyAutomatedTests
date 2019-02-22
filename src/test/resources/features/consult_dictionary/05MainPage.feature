@@ -126,3 +126,17 @@ Feature: Testing of Main page
     Then User clicks on the 'User menu'
     And  User clicks on the 'Profile' button
     Then 'Profile' page is opened
+    And Check that 'Profile' is present
+    And Check that 'Account settings' is present
+    And Check that 'Notification settings' is present
+    And Check that 'First Name' is present
+    And Check that 'Last Name' is present
+    And Check that 'Phone number' is present
+    And Check that 'Skype' is present
+    And Check that 'What I do' is present
+    And Check that 'Where I am' is present
+    And Check that 'Time Zone' is present
+    And Check that 'Avatar big' is present
+    And Check that 'Change avatar' button is present
+    And Check that 'Save' button is present
+
