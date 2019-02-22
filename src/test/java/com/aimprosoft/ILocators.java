@@ -1,5 +1,7 @@
 package com.aimprosoft;
 
+import org.yecht.Data;
+
 public interface ILocators {
     //Registration page1
     String TITTLE_RP = "//div[@class='text-center']";
@@ -104,7 +106,7 @@ public interface ILocators {
     String PRF_AVATAR = "//img[@class='img-responsive']";
     String PRF_CHGAVATAR = "//label[contains(@class,'btn btn-default')]";
 
-    //Account settings
+    //Account settings page
     String PROFILE_SET = "//div[@class='settings-item active']";
     String ACC_SET = "//div[contains(text(),'Account settings')]";
     String NOTIF_SET = "//div[contains(text(),'Notification settings')]";
@@ -116,8 +118,22 @@ public interface ILocators {
     String ACC_OLD_PASS = "//input[@name='password']";
     String ACC_NEW_PASS = "//input[@name='password2']";
 
-
-    //String ="";
-
+    //Notification settings page
+    String NS_PAGE = "//h1[contains(text(),'Desktop Notifications')]";
+    String NS_DESK_ACT = "//select[@id='desktopActions']";
+    String NS_DECK_SOUND = "//select[@id='desktopSound']";
+    String NS_MOB_ACT = "//select[@id='mobileActions']";
+    String NS_MOB_SOUND = "//select[@id='mobileSound']";
+    String NS_ROOM_SET = "//h1[contains(text(),'Room Specific Settings')]";
+    String NS_DND_SW = "//div[@class='switch-el undefined']";
+    String NS_MAR_MES = "//h1[contains(text(),'Marking messages as read')]";
+    String NS_MUTE_ALL = "//span[contains(text(),'Mute all chat for:')]";
+    String NS_MUTE_20M = "//span[contains(text(),'20 minutes')]";
+    String NS_MUTE_1H = "//span[contains(text(),'1 hour')]";
+    String NS_MUTE_2H = "//span[contains(text(),'2 hours')]";
+    String NS_MUTE_4H = "//div[contains(@class,'left-panel')]//ul[contains(@class,'')]//li[5]//a[1]//span[1]";
+    String NS_MUTE_8H = "//span[contains(text(),'8 hours')]";
+    String NS_MUTE_24H = "//span[contains(text(),'24 hours')]";
+    String NS_SETTINGS = "//span[contains(@class,'settings')]";
 
 }

@@ -160,3 +160,47 @@ Feature: Testing of Main page
     And Check that 'New password' field is present
 
   Scenario: 07.0004 Check 'Notification settings' item in 'Left panel'
+    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Then User is on the Authorization page
+    When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
+    And User clicks on the SIGN IN button
+    And Wait for loader
+    Then Authorization is successful
+    Then User clicks on the 'User menu'
+    And  User clicks on the 'Profile' button
+    Then 'Profile' page is opened
+    And User clicks on the 'Notification settings' item
+    Then 'Notification settings' page is opened
+    And Check that 'Desktop Notifications' item is present
+    And Check that 'Mobile Push Notifications' item is present
+    And Check that 'Room Specific Settings' item is present
+    And Check that 'Do not disturb' item is present
+    And Check that 'Marking messages as read' item is present
+
+  Scenario: 07.0005 Check 'Sign out' item in drop-down user menu
+    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Then User is on the Authorization page
+    When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
+    And User clicks on the SIGN IN button
+    And Wait for loader
+    Then Authorization is successful
+    Then User clicks on the 'User menu'
+    And  User clicks on the 'SIGN OUT' button
+    Then Authorization page is opened
+
+  Scenario: 07.0008 Check dropdown menu 'The Bell' icon
+    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Then User is on the Authorization page
+    When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
+    And User clicks on the SIGN IN button
+    And Wait for loader
+    Then Authorization is successful
+    Then User clicks on the 'The Bell' button
+    And Check that 'Mute all chat for:' item is present
+    And Check that '20 minutes' item is present
+    And Check that '1 hour' item is present
+    And Check that '2 hours' item is present
+    And Check that '4 hours' item is present
+    And Check that '8 hours' item is present
+    And Check that '24 hours' item is present
+    And Check that 'Notification settings' item is present

@@ -678,4 +678,89 @@ public class DefinitionSteps {
     public void checkThatNewPasswordFieldIsPresent() {
         steps.checkThatNewPasswordFieldIsPresent();
     }
+
+    @And("^User clicks on the 'Notification settings' item$")
+    public void userClicksOnTheNotificationSettingsItem() {
+        steps.userClicksOnTheNotificationSettingsItem();
+    }
+
+    @Then("^'Notification settings' page is opened$")
+    public void notificationSettingsPageIsOpened() {
+        steps.notificationSettingsPageIsOpened();
+    }
+
+    @And("^Check that 'Desktop Notifications' item is present$")
+    public void checkThatDesktopNotificationsItemIsPresent() {
+        steps.checkThatDesktopNotificationsItemIsPresent();
+    }
+
+    @And("^Check that 'Mobile Push Notifications' item is present$")
+    public void checkThatMobilePushNotificationsItemIsPresent() {
+        steps.checkThatMobilePushNotificationsItemIsPresent();
+    }
+
+    @And("^Check that 'Room Specific Settings' item is present$")
+    public void checkThatRoomSpecificSettingsItemIsPresent() {
+        steps.checkThatRoomSpecificSettingsItemIsPresent();
+    }
+
+    @And("^Check that 'Do not disturb' item is present$")
+    public void checkThatDoNotDisturbItemIsPresent() {
+        steps.checkThatDoNotDisturbItemIsPresent();
+    }
+
+    @And("^Check that 'Marking messages as read' item is present$")
+    public void checkThatMarkingMessagesAsReadItemIsPresent() {
+        steps.checkThatMarkingMessagesAsReadItemIsPresent();
+    }
+
+    @And("^User clicks on the 'SIGN OUT' button$")
+    public void userClicksOnTheSIGNOUTButton() {
+        steps.userClicksOnTheSIGNOUTButton();
+    }
+
+    @Then("^User clicks on the 'The Bell' button$")
+    public void userClicksOnTheTheBellButton() {
+        steps.userClicksOnTheTheBellButton();
+    }
+
+    @And("^Check that 'Mute all chat for:' item is present$")
+    public void checkThatMuteAllChatForItemIsPresent() {
+        steps.checkThatMuteAllChatForItemIsPresent();
+    }
+
+    @And("^Check that '20 minutes' item is present$")
+    public void checkThat20MinutesItemIsPresent() {
+        steps.checkThat20MinutesItemIsPresent();
+    }
+
+    @And("^Check that '1 hour' item is present$")
+    public void checkThat1HourItemIsPresent() {
+        steps.checkThat1HourItemIsPresent();
+    }
+
+    @And("^Check that '2 hours' item is present$")
+    public void checkThat2HoursItemIsPresent() {
+        steps.checkThat2HoursItemIsPresent();
+    }
+
+    @And("^Check that '4 hours' item is present$")
+    public void checkThat4HoursItemIsPresent() {
+        steps.checkThat4HoursItemIsPresent();
+    }
+
+    @And("^Check that '8 hours' item is present$")
+    public void checkThat8HoursItemIsPresent() {
+        steps.checkThat8HoursItemIsPresent();
+    }
+
+    @And("^Check that '24 hours' item is present$")
+    public void checkThat24HoursItemIsPresent() {
+        steps.checkThat24HoursItemIsPresent();
+    }
+
+    @And("^Check that 'Notification settings' item is present$")
+    public void checkThatNotificationSettingsItemIsPresent() {
+        steps.checkThatNotificationSettingsItemIsPresent();
+    }
 }

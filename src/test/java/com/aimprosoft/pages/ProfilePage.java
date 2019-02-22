@@ -95,4 +95,73 @@ public class ProfilePage extends PageObject {
     public boolean checkThatNewPasswordFieldIsPresent() {
         return $(ILocators.ACC_NEW_PASS).isDisplayed();
     }
+
+    public void userClicksOnTheNotificationSettingsItem() {
+        $(ILocators.NOTIF_SET).click();
+    }
+
+    public boolean notificationSettingsPageIsOpened() {
+        return $(ILocators.NS_PAGE).isDisplayed();
+    }
+
+    public boolean checkThatDesktopNotificationsItemIsPresent() {
+        return $(ILocators.NS_DESK_ACT).isDisplayed();
+    }
+
+    public boolean checkThatMobilePushNotificationsItemIsPresent() {
+        return $(ILocators.NS_MOB_ACT).isDisplayed();
+    }
+
+    public boolean checkThatRoomSpecificSettingsItemIsPresent() {
+        return $(ILocators.NS_ROOM_SET).isDisplayed();
+    }
+
+    public boolean checkThatDoNotDisturbItemIsPresent() {
+        return $(ILocators.NS_DND_SW).isDisplayed();
+    }
+
+    public boolean checkThatMarkingMessagesAsReadItemIsPresent() {
+        return $(ILocators.NS_MAR_MES).isDisplayed();
+    }
+
+    public void userClicksOnTheSIGNOUTButton() {
+        $(ILocators.UM_SIGN_OUT).click();
+        waitABit(2000);
+    }
+
+    public void userClicksOnTheTheBellButton() {
+        $(ILocators.BELL).click();
+    }
+
+    public boolean checkThatMuteAllChatForItemIsPresent() {
+        return $(ILocators.NS_MUTE_ALL).isDisplayed();
+    }
+
+    public boolean checkThat20MinutesItemIsPresent() {
+        return $(ILocators.NS_MUTE_20M).isDisplayed();
+    }
+
+    public boolean checkThat1HourItemIsPresent() {
+        return $(ILocators.NS_MUTE_1H).isDisplayed();
+    }
+
+    public boolean checkThat2HoursItemIsPresent() {
+        return $(ILocators.NS_MUTE_2H).isDisplayed();
+    }
+
+    public boolean checkThat4HoursItemIsPresent() {
+        return $(ILocators.NS_MUTE_4H).isDisplayed();
+    }
+
+    public boolean checkThat8HoursItemIsPresent() {
+        return $(ILocators.NS_MUTE_8H).isDisplayed();
+    }
+
+    public boolean checkThat24HoursItemIsPresent() {
+        return $(ILocators.NS_MUTE_24H).isDisplayed();
+    }
+
+    public boolean checkThatNotificationSettingsItemIsPresent() {
+        return $(ILocators.NS_SETTINGS).isDisplayed();
+    }
 }

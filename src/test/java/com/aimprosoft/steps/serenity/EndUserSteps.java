@@ -7,6 +7,7 @@ import net.thucydides.core.annotations.Step;
 import org.junit.Assert;
 
 import java.lang.reflect.AccessibleObject;
+import java.nio.channels.AsynchronousServerSocketChannel;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasItem;
@@ -680,5 +681,90 @@ public class EndUserSteps {
     @Step
     public void checkThatNewPasswordFieldIsPresent() {
         Assert.assertTrue("New Password Field Is Not Present", profilePage.checkThatNewPasswordFieldIsPresent());
+    }
+
+    @Step
+    public void userClicksOnTheNotificationSettingsItem() {
+        profilePage.userClicksOnTheNotificationSettingsItem();
+    }
+
+    @Step
+    public void notificationSettingsPageIsOpened() {
+        Assert.assertTrue("notification Settings Page Is Not Opened", profilePage.notificationSettingsPageIsOpened());
+    }
+
+    @Step
+    public void checkThatDesktopNotificationsItemIsPresent() {
+        Assert.assertTrue("Desktop Notifications Item Is Not Present", profilePage.checkThatDesktopNotificationsItemIsPresent());
+    }
+
+    @Step
+    public void checkThatMobilePushNotificationsItemIsPresent() {
+        Assert.assertTrue("Mobile Push Notifications Item Is Not Present", profilePage.checkThatMobilePushNotificationsItemIsPresent());
+    }
+
+    @Step
+    public void checkThatRoomSpecificSettingsItemIsPresent() {
+        Assert.assertTrue("Room Specific Settings Item Is Not Present", profilePage.checkThatRoomSpecificSettingsItemIsPresent());
+    }
+
+    @Step
+    public void checkThatDoNotDisturbItemIsPresent() {
+        Assert.assertTrue("Do Not Disturb Item Is Not Present", profilePage.checkThatDoNotDisturbItemIsPresent());
+    }
+
+    @Step
+    public void checkThatMarkingMessagesAsReadItemIsPresent() {
+        Assert.assertTrue("Marking Messages As Read Item Is Not Present", profilePage.checkThatMarkingMessagesAsReadItemIsPresent());
+    }
+
+    @Step
+    public void userClicksOnTheSIGNOUTButton() {
+        profilePage.userClicksOnTheSIGNOUTButton();
+    }
+
+    @Step
+    public void userClicksOnTheTheBellButton() {
+        profilePage.userClicksOnTheTheBellButton();
+    }
+
+    @Step
+    public void checkThatMuteAllChatForItemIsPresent() {
+        Assert.assertTrue("Mute All Chat For Item Is Not Present", profilePage.checkThatMuteAllChatForItemIsPresent());
+    }
+
+    @Step
+    public void checkThat20MinutesItemIsPresent() {
+        Assert.assertTrue("20 Minutes Item Is Not Present", profilePage.checkThat20MinutesItemIsPresent());
+    }
+
+    @Step
+    public void checkThat1HourItemIsPresent() {
+        Assert.assertTrue("1 Hour Item Is Not Present", profilePage.checkThat1HourItemIsPresent());
+    }
+
+    @Step
+    public void checkThat2HoursItemIsPresent() {
+        Assert.assertTrue("2 Hours Item Is Not Present", profilePage.checkThat2HoursItemIsPresent());
+    }
+
+    @Step
+    public void checkThat4HoursItemIsPresent() {
+        Assert.assertTrue("4 Hours Item Is Not Present", profilePage.checkThat4HoursItemIsPresent());
+    }
+
+    @Step
+    public void checkThat8HoursItemIsPresent() {
+        Assert.assertTrue("8 Hours Item Is Not Present", profilePage.checkThat8HoursItemIsPresent());
+    }
+
+    @Step
+    public void checkThat24HoursItemIsPresent() {
+        Assert.assertTrue("24 Hours Item Is Not Present", profilePage.checkThat24HoursItemIsPresent());
+    }
+
+    @Step
+    public void checkThatNotificationSettingsItemIsPresent() {
+        Assert.assertTrue("Notification Settings Item Is Not Present", profilePage.checkThatNotificationSettingsItemIsPresent());
     }
 }
