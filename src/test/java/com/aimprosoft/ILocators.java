@@ -104,9 +104,20 @@ public interface ILocators {
     String PRF_AVATAR = "//img[@class='img-responsive']";
     String PRF_CHGAVATAR = "//label[contains(@class,'btn btn-default')]";
 
+    //Account settings
     String PROFILE_SET = "//div[@class='settings-item active']";
     String ACC_SET = "//div[contains(text(),'Account settings')]";
     String NOTIF_SET = "//div[contains(text(),'Notification settings')]";
+    String ACC_SET_PAGE = "//div[contains(text(),'Edit your settings')]";
+    String ACC_EMAIL = "//input[@name='email']";
+    String ACC_EMAIL_VAL = "//input[@value='$1']";
+    String ACC_USERNAME = "//input[@name='username']";
+    String ACC_USERNAME_VAL = "//input[@value='$1']";
+    String ACC_OLD_PASS = "//input[@name='password']";
+    String ACC_NEW_PASS = "//input[@name='password2']";
+
 
     //String ="";
+
+
 }

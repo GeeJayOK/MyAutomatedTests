@@ -641,4 +641,44 @@ public class EndUserSteps {
     public void checkThatSaveButtonIsPresent() {
         Assert.assertTrue("Save Button Is Not Present", profilePage.checkThatSaveButtonIsPresent());
     }
+
+    @Step
+    public void userClicksOnTheAccountSettingsItem() {
+        profilePage.userClicksOnTheAccountSettingsItem();
+    }
+
+    @Step
+    public void accountSettingsPageIsOpened() {
+        Assert.assertTrue("account Settings Page Is Not Opened", profilePage.accountSettingsPageIsOpened());
+    }
+
+    @Step
+    public void checkThatEmailFieldAccPageIsPresent() {
+        Assert.assertTrue("Email Field AccPage Is Not Present", profilePage.checkThatEmailFieldAccPageIsPresent());
+    }
+
+    @Step
+    public void checkThatEmailFieldContains(String arg0) {
+        Assert.assertTrue("Email Field Doesn't Contains" + arg0, profilePage.checkThatEmailFieldContains(arg0));
+    }
+
+    @Step
+    public void checkThatUsernameFieldIsPresent() {
+        Assert.assertTrue("Username Field Is Not Present", profilePage.checkThatUsernameFieldIsPresent());
+    }
+
+    @Step
+    public void checkThatUsernameFieldContains(String arg0) {
+        Assert.assertTrue("Username Field Doesn't Contains" + arg0, profilePage.checkThatUsernameFieldContains(arg0));
+    }
+
+    @Step
+    public void checkThatOldPasswordFieldIsPresent() {
+        Assert.assertTrue("Old Password Field Is Not Present", profilePage.checkThatOldPasswordFieldIsPresent());
+    }
+
+    @Step
+    public void checkThatNewPasswordFieldIsPresent() {
+        Assert.assertTrue("New Password Field Is Not Present", profilePage.checkThatNewPasswordFieldIsPresent());
+    }
 }

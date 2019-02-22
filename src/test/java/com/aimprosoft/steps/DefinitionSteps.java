@@ -638,4 +638,44 @@ public class DefinitionSteps {
     public void checkThatSaveButtonIsPresent() {
         steps.checkThatSaveButtonIsPresent();
     }
+
+    @And("^User clicks on the 'Account settings' item$")
+    public void userClicksOnTheAccountSettingsItem() {
+        steps.userClicksOnTheAccountSettingsItem();
+    }
+
+    @Then("^'Account settings' page is opened$")
+    public void accountSettingsPageIsOpened() {
+        steps.accountSettingsPageIsOpened();
+    }
+
+    @And("^Check that 'Email' field is present$")
+    public void checkThatEmailFieldAccPageIsPresent() {
+        steps.checkThatEmailFieldAccPageIsPresent();
+    }
+
+    @And("^Check that 'Email' field contains \"([^\"]*)\"$")
+    public void checkThatEmailFieldContains(String arg0) throws Throwable {
+        steps.checkThatEmailFieldContains(arg0);
+    }
+
+    @And("^Check that 'Username' field is present$")
+    public void checkThatUsernameFieldIsPresent() {
+        steps.checkThatUsernameFieldIsPresent();
+    }
+
+    @And("^Check that 'Username' field contains \"([^\"]*)\"$")
+    public void checkThatUsernameFieldContains(String arg0) throws Throwable {
+        steps.checkThatUsernameFieldContains(arg0);
+    }
+
+    @And("^Check that 'Old password' field is present$")
+    public void checkThatOldPasswordFieldIsPresent() {
+        steps.checkThatOldPasswordFieldIsPresent();
+    }
+
+    @And("^Check that 'New password' field is present$")
+    public void checkThatNewPasswordFieldIsPresent() {
+        steps.checkThatNewPasswordFieldIsPresent();
+    }
 }

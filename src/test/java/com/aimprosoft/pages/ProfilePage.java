@@ -63,4 +63,36 @@ public class ProfilePage extends PageObject {
     public boolean checkThatSaveButtonIsPresent() {
         return $(ILocators.PRF_SAVE).isDisplayed();
     }
+
+    public void userClicksOnTheAccountSettingsItem() {
+        $(ILocators.ACC_SET).click();
+    }
+
+    public boolean accountSettingsPageIsOpened() {
+        return $(ILocators.ACC_SET_PAGE).isDisplayed();
+    }
+
+    public boolean checkThatEmailFieldAccPageIsPresent() {
+        return $(ILocators.ACC_EMAIL).isDisplayed();
+    }
+
+    public boolean checkThatEmailFieldContains(String arg0) {
+        return $(ILocators.ACC_EMAIL_VAL.replace("$1", arg0)).isDisplayed();
+    }
+
+    public boolean checkThatUsernameFieldIsPresent() {
+        return $(ILocators.ACC_USERNAME).isDisplayed();
+    }
+
+    public boolean checkThatUsernameFieldContains(String arg0) {
+        return $(ILocators.ACC_USERNAME_VAL.replace("$1", arg0)).isDisplayed();
+    }
+
+    public boolean checkThatOldPasswordFieldIsPresent() {
+        return $(ILocators.ACC_OLD_PASS).isDisplayed();
+    }
+
+    public boolean checkThatNewPasswordFieldIsPresent() {
+        return $(ILocators.ACC_NEW_PASS).isDisplayed();
+    }
 }

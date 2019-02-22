@@ -140,3 +140,21 @@ Feature: Testing of Main page
     And Check that 'Change avatar' button is present
     And Check that 'Save' button is present
 
+  Scenario: 07.0003 Check 'Account settings' item in 'Left panel'
+    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Then User is on the Authorization page
+    When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
+    And User clicks on the SIGN IN button
+    And Wait for loader
+    Then Authorization is successful
+    Then User clicks on the 'User menu'
+    And  User clicks on the 'Profile' button
+    Then 'Profile' page is opened
+    And User clicks on the 'Account settings' item
+    Then 'Account settings' page is opened
+    And Check that 'Email' field is present
+    And Check that 'Email' field contains "ya.getalo@aimprosoft.com"
+    And Check that 'Username' field is present
+    And Check that 'Username' field contains "qwer_"
+    And Check that 'Old password' field is present
+    And Check that 'New password' field is present
