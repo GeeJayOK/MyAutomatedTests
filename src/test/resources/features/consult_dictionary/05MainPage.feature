@@ -158,3 +158,5 @@ Feature: Testing of Main page
     And Check that 'Username' field contains "qwer_"
     And Check that 'Old password' field is present
     And Check that 'New password' field is present
+
+  Scenario: 07.0004 Check 'Notification settings' item in 'Left panel'
