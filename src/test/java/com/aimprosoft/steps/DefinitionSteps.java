@@ -805,4 +805,9 @@ public class DefinitionSteps {
     public void checkThatEnteredDataInTheFirstNameFieldIsSaved(String arg0) throws Throwable {
         steps.checkThatEnteredDataInTheFirstNameFieldIsSaved(arg0);
     }
+
+    @And("^Check that entered data \"([^\"]*)\" in the 'Last Name' field is saved$")
+    public void checkThatEnteredDataInTheLastNameFieldIsSaved(String arg0) throws Throwable {
+        steps.checkThatEnteredDataInTheLastNameFieldIsSaved(arg0);
+    }
 }

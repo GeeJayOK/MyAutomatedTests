@@ -130,4 +130,4 @@ Feature: Testing of User Menu page
     Then User refresh the page
     And Wait for loader
     Then Check that entered data "John" in the 'First Name' field is saved
-    #And  Check that entered data "Smith" in the 'Last Name' field is saved
+    And  Check that entered data "Smith" in the 'Last Name' field is saved

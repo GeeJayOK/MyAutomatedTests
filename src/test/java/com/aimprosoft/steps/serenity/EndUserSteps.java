@@ -805,6 +805,11 @@ public class EndUserSteps {
 
     @Step
     public void checkThatEnteredDataInTheFirstNameFieldIsSaved(String arg0) {
-        Assert.assertTrue("Entered Data In The First Name Field Didn't Save", profilePage.checkThatEnteredDataInTheFirstNameFieldIsSaved(arg0));
+        Assert.assertEquals("Entered Data In The First Name Field Didn't Save", arg0, profilePage.checkThatEnteredDataInTheFirstNameFieldIsSaved());
+    }
+
+    @Step
+    public void checkThatEnteredDataInTheLastNameFieldIsSaved(String arg0) {
+        Assert.assertEquals("Entered Data In The Last Name Field Didin't Save", arg0, profilePage.checkThatEnteredDataInTheLastNameFieldIsSaved());
     }
 }

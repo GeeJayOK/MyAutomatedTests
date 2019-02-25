@@ -2,6 +2,7 @@ package com.aimprosoft.pages;
 
 import net.thucydides.core.pages.PageObject;
 import com.aimprosoft.ILocators;
+import org.openqa.selenium.By;
 
 public class ProfilePage extends PageObject {
 
@@ -196,9 +197,11 @@ public class ProfilePage extends PageObject {
         getDriver().navigate().refresh();
     }
 
-    public boolean checkThatEnteredDataInTheFirstNameFieldIsSaved(String arg0) {
-        getDriver().get($(ILocators.PRF_BACK_ARROW));
+    public String checkThatEnteredDataInTheFirstNameFieldIsSaved() {
+        return $(ILocators.PRF_FIRST_NAME).getAttribute("value");
+    }
 
-        return true;
+    public String checkThatEnteredDataInTheLastNameFieldIsSaved() {
+        return $(ILocators.PRF_LAST_NAME).getAttribute("value");
     }
 }
