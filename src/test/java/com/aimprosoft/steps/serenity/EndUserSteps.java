@@ -767,4 +767,44 @@ public class EndUserSteps {
     public void checkThatNotificationSettingsItemIsPresent() {
         Assert.assertTrue("Notification Settings Item Is Not Present", profilePage.checkThatNotificationSettingsItemIsPresent());
     }
+
+    @Step
+    public void userClicksOnTheNotificationSettingsButton() {
+        profilePage.userClicksOnTheNotificationSettingsButton();
+    }
+
+    @Step
+    public void userEnterDataInTheFirstNameField(String arg0) {
+        profilePage.userEnterDataInTheFirstNameField(arg0);
+    }
+
+    @Step
+    public void userEnterDataInTheLastNameField(String arg0) {
+        profilePage.userEnterDataInTheLastNameField(arg0);
+    }
+
+    @Step
+    public void userClicksOnTheSaveButton() {
+        profilePage.userClicksOnTheSaveButton();
+    }
+
+    @Step
+    public void messageIsDisplayed(String arg0) {
+        profilePage.messageIsDisplayed(arg0);
+    }
+
+    @Step
+    public void userClicksOnTheArrowBack() {
+        profilePage.userClicksOnTheArrowBack();
+    }
+
+    @Step
+    public void userRefreshThePage() {
+        profilePage.userRefreshThePage();
+    }
+
+    @Step
+    public void checkThatEnteredDataInTheFirstNameFieldIsSaved(String arg0) {
+        Assert.assertTrue("Entered Data In The First Name Field Didn't Save", profilePage.checkThatEnteredDataInTheFirstNameFieldIsSaved(arg0));
+    }
 }

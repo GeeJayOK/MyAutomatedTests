@@ -150,4 +150,5 @@ public class MainPage extends PageObject {
     public boolean checkThatDownloadAppButtonIsPresent() {
         return $(ILocators.UM_DOWNLOAD).isDisplayed();
     }
+
 }

@@ -105,6 +105,8 @@ public interface ILocators {
     String PRF_SAVE = "//button[@type='button']";
     String PRF_AVATAR = "//img[@class='img-responsive']";
     String PRF_CHGAVATAR = "//label[contains(@class,'btn btn-default')]";
+    String PRF_BACK_ARROW = "//i[contains(text(),'arrow_back')]";
+    String PRF_MESS_SUCCESS = "//div[contains(text(),'$1')]";
 
     //Account settings page
     String PROFILE_SET = "//div[@class='settings-item active']";

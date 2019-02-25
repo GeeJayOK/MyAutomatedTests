@@ -4,6 +4,7 @@ import net.thucydides.core.pages.PageObject;
 import com.aimprosoft.ILocators;
 
 public class ProfilePage extends PageObject {
+
     public void userClicksOnTheProfileButton() {
         $(ILocators.UM_PROFILE).click();
     }
@@ -163,5 +164,41 @@ public class ProfilePage extends PageObject {
 
     public boolean checkThatNotificationSettingsItemIsPresent() {
         return $(ILocators.NS_SETTINGS).isDisplayed();
+    }
+
+    public void userClicksOnTheNotificationSettingsButton() {
+        $(ILocators.NS_SETTINGS).click();
+    }
+
+    public void userEnterDataInTheFirstNameField(String arg0) {
+        $(ILocators.PRF_FIRST_NAME).clear();
+        $(ILocators.PRF_FIRST_NAME).sendKeys(arg0);
+    }
+
+    public void userEnterDataInTheLastNameField(String arg0) {
+        $(ILocators.PRF_LAST_NAME).clear();
+        $(ILocators.PRF_LAST_NAME).sendKeys(arg0);
+    }
+
+    public void userClicksOnTheSaveButton() {
+        $(ILocators.PRF_SAVE).click();
+    }
+
+    public void messageIsDisplayed(String arg0) {
+        $(ILocators.PRF_MESS_SUCCESS.replace("$1", arg0)).isDisplayed();
+    }
+
+    public void userClicksOnTheArrowBack() {
+        $(ILocators.PRF_BACK_ARROW).click();
+    }
+
+    public void userRefreshThePage() {
+        getDriver().navigate().refresh();
+    }
+
+    public boolean checkThatEnteredDataInTheFirstNameFieldIsSaved(String arg0) {
+        getDriver().get($(ILocators.PRF_BACK_ARROW));
+
+        return true;
     }
 }

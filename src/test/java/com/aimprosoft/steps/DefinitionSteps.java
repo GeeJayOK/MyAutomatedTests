@@ -763,4 +763,46 @@ public class DefinitionSteps {
     public void checkThatNotificationSettingsItemIsPresent() {
         steps.checkThatNotificationSettingsItemIsPresent();
     }
+
+    @And("^User clicks on the 'Notification settings' button$")
+    public void userClicksOnTheNotificationSettingsButton() {
+        steps.userClicksOnTheNotificationSettingsButton();
+    }
+
+    @Then("^User enter data \"([^\"]*)\" in the 'First Name' field$")
+    public void userEnterDataInTheFirstNameField(String arg0) throws Throwable {
+        steps.userEnterDataInTheFirstNameField(arg0);
+    }
+
+    @Then("^User enter data \"([^\"]*)\" in the 'Last Name' field$")
+    public void userEnterDataInTheLastNameField(String arg0) throws Throwable {
+        steps.userEnterDataInTheLastNameField(arg0);
+    }
+
+    @Then("^User clicks on the 'Save' button$")
+    public void userClicksOnTheSaveButton() {
+        steps.userClicksOnTheSaveButton();
+    }
+
+    @Then("^Message \"([^\"]*)\" is displayed$")
+    public void messageIsDisplayed(String arg0) throws Throwable {
+        steps.messageIsDisplayed(arg0);
+    }
+
+    @Then("^User clicks on the 'Arrow Back'$")
+    public void userClicksOnTheArrowBack() {
+        steps.userClicksOnTheArrowBack();
+    }
+
+
+    @Then("^User refresh the page$")
+    public void userRefreshThePage() {
+        steps.userRefreshThePage();
+    }
+
+
+    @Then("^Check that entered data \"([^\"]*)\" in the 'First Name' field is saved$")
+    public void checkThatEnteredDataInTheFirstNameFieldIsSaved(String arg0) throws Throwable {
+        steps.checkThatEnteredDataInTheFirstNameFieldIsSaved(arg0);
+    }
 }
