@@ -14,9 +14,9 @@ public class DefinitionSteps {
     @Steps
     EndUserSteps steps;
 
-    @Given("^User go to the \"([^\"]*)\" page$")
-    public void userGoToThePage(String arg0) throws Throwable {
-        steps.userGoToThePage(arg0);
+    @Given("^User goes to the \"([^\"]*)\" page$")
+    public void userGoesToThePage(String url) throws Throwable {
+        steps.userGoesToThePage(url);
     }
 
     @Then("^User is on the Authorization page$")
@@ -24,12 +24,12 @@ public class DefinitionSteps {
         steps.userIsOnTheAuthorizationPage();
     }
 
-    @When("^user clicks on the register link$")
+    @When("^User clicks on the register link$")
     public void userClicksOnTheRegisterLink() {
         steps.userClicksOnTheRegisterLink();
     }
 
-    @Then("^registration form title is present$")
+    @Then("^Registration form title is present$")
     public void registrationFormTitleIsPresent() {
         steps.registrationFormTitleIsPresent();
     }
@@ -40,20 +40,20 @@ public class DefinitionSteps {
         steps.registrationPageIsOpened(url);
     }
 
-    @Then("^User clicks on the Submit button$")
+    @Then("^User clicks on the 'Submit' button$")
     public void userClicksOnTheSubmitButton() {
         steps.userClicksOnTheSubmitButton();
     }
 
-    @Then("^Second registration page is opened$")
-    public void secondRegistrationPageIsOpened() {
-        steps.secondRegistrationPageIsOpened();
+    @Then("^Registration page2 is opened$")
+    public void registrationPage2IsOpened() {
+        steps.registrationPage2IsOpened();
     }
 
 
     @When("^User perform login with \"([^\"]*)\" email and \"([^\"]*)\" password in the \"([^\"]*)\" and \"([^\"]*)\"$")
-    public void userPerformLoginWithEmailAndPasswordInTheAnd(String arg0, String arg1, String arg2, String arg3) throws Throwable {
-        steps.userPerformLoginWithEmailAndPassword(arg0, arg1, arg2, arg3);
+    public void userPerformLoginWithEmailAndPasswordInTheAnd(String email, String pass, String logF, String passF) throws Throwable {
+        steps.userPerformLoginWithEmailAndPassword(email, pass, logF, passF);
     }
 
     @And("^User clicks on the SIGN IN button$")
@@ -71,43 +71,43 @@ public class DefinitionSteps {
         steps.waitForLoader();
     }
 
-    @Given("^user go to Registration page one \"([^\"]*)\"$")
+    /*@Given("^user go to Registration page one \"([^\"]*)\"$")
     public void userGoToRegistrationPageOne(String arg0) throws Throwable {
-        steps.secondRegistrationPageIsOpened();
+        steps.registrationPage1IsOpened();
+    }*/
+
+    @Given("^User goes to \"([^\"]*)\" page$")
+    public void userGoesToPage(String url) throws Throwable {
+        steps.userGoesToPage(url);
     }
 
-    @Given("^User go to Registration \"([^\"]*)\" page$")
-    public void userGoToRegistrationPage(String arg0) throws Throwable {
-        steps.firstRegistrationPageIsOpen(arg0);
+    @When("^Registration page1 is opened$")
+    public void registrationPage1IsOpened() {
+        steps.registrationPage1IsOpened();
     }
 
-    @When("^First registration page is opened$")
-    public void firstRegistrationPageIsOpened() {
-        steps.firstRegistrationPageIsOpened();
-    }
-
-    @Then("^Check that Email field is present$")
+    @Then("^Check that 'Email' field is present$")
     public void checkThatEmailFieldIsPresent() {
         steps.checkThatEmailFieldIsPresent();
     }
 
-    @And("^SUBMIT button is present$")
+    @And("^Check that 'SUBMIT' button is present$")
     public void submitButtonIsPresent() {
         steps.submitButtonIsPresent();
     }
 
-    @And("^CANCEL button is present$")
+    @And("^Check that 'CANCEL' button is present$")
     public void cancelButtonIsPresent() {
         steps.cancelButtonIsPresent();
     }
 
-    @And("^'Back to authorization' link is present$")
+    @And("^Check that 'Back to authorization' link is present$")
     public void backToAuthorizationLinkIsPresent() {
         steps.backToAuthorizationLinkIsPresent();
     }
 
 
-    @When("^Check that SUBMIT button is blocked$")
+    @When("^Check that 'SUBMIT' button is blocked$")
     public void checkThatSUBMITButtonIsBlocked() {
         steps.checkThatSUBMITButtonIsBlocked();
     }
@@ -133,16 +133,16 @@ public class DefinitionSteps {
     }
 
     @Then("^User enter data \"([^\"]*)\" in the 'Email' field$")
-    public void userEnterDataInTheEmailField(String arg0) throws Throwable {
-        steps.userEnterDataInTheEmailField(arg0);
+    public void userEnterDataInTheEmailField(String email) throws Throwable {
+        steps.userEnterDataInTheEmailField(email);
     }
 
     @Then("^Error message \"([^\"]*)\" is displayed$")
-    public void errorMessageIsDisplayed(String arg0) throws Throwable {
-        steps.errorMessageIsDisplayed(arg0);
+    public void errorMessageIsDisplayed(String error) throws Throwable {
+        steps.errorMessageIsDisplayed(error);
     }
 
-    @And("^Check that SUBMIT button is available$")
+    @And("^Check that 'SUBMIT' button is available$")
     public void checkThatSUBMITButtonIsAvailable() {
         steps.checkThatSUBMITButtonIsAvailable();
     }
@@ -153,7 +153,7 @@ public class DefinitionSteps {
     }
 
 
-    @And("^Check that blocked Email field is present$")
+    @And("^Check that blocked 'Email' field is present$")
     public void checkThatBlockedEmailFieldIsPresent() {
         steps.checkThatBlockedEmailFieldIsPresent();
     }
@@ -173,22 +173,22 @@ public class DefinitionSteps {
         steps.checkThatLoginIsPresent();
     }
 
-    @And("^Check that PasswordOne is present$")
-    public void checkThatPasswordOneIsPresent() {
-        steps.checkThatPasswordOneIsPresent();
+    @And("^Check that 'Password1' is present$")
+    public void checkThatPassword1IsPresent() {
+        steps.checkThatPassword1IsPresent();
     }
 
-    @And("^Check that PasswordTwo is present$")
+    @And("^Check that 'Password2' is present$")
     public void checkThatPasswordTwoIsPresent() {
         steps.checkThatPasswordTwoIsPresent();
     }
 
-    @And("^Check that SUBMIT button is present$")
+    @And("^Check that 'SUBMIT' is present$")
     public void checkThatSUBMITButtonIsPresent() {
         steps.checkThatSUBMITButtonIsPresent();
     }
 
-    @And("^Check that BTA link is present$")
+    @And("^Check that 'BTA' link is present$")
     public void checkThatBTALinkIsPresent() {
         steps.checkThatBTALinkIsPresent();
     }
@@ -198,25 +198,25 @@ public class DefinitionSteps {
         steps.userClicksOnTheCancelButtonRP2();
     }
 
-    @And("^User enter data \"([^\"]*)\" to Login field$")
-    public void userEnterDataToLoginField(String arg0) throws Throwable {
-        steps.userEnterDataToLoginField(arg0);
+    @And("^User enter data \"([^\"]*)\" to 'Login' field$")
+    public void userEnterDataToLoginField(String login) throws Throwable {
+        steps.userEnterDataToLoginField(login);
     }
 
-    @And("^User enter data \"([^\"]*)\" to PasswordOne field$")
-    public void userEnterDataToPasswordOneField(String arg0) throws Throwable {
-        steps.userEnterDataToPasswordOneField(arg0);
+    @And("^User enter data \"([^\"]*)\" to 'Password1' field$")
+    public void userEnterDataToPasswordOneField(String pass1) throws Throwable {
+        steps.userEnterDataToPasswordOneField(pass1);
     }
 
-    @And("^User enter data \"([^\"]*)\" to PasswordTwo field$")
-    public void userEnterDataToPasswordTwoField(String arg0) throws Throwable {
-        steps.userEnterDataToPasswordTwoField(arg0);
+    @And("^User enter data \"([^\"]*)\" to 'Password2' field$")
+    public void userEnterDataToPasswordTwoField(String pass2) throws Throwable {
+        steps.userEnterDataToPasswordTwoField(pass2);
     }
 
 
     @And("^User enter data \"([^\"]*)\" in the 'Email confirmation code' field$")
-    public void userEnterDataInTheEmailConfirmationCodeField(String arg0) throws Throwable {
-        steps.userEnterDataInTheEmailConfirmationCodeField(arg0);
+    public void userEnterDataInTheEmailConfirmationCodeField(String econf) throws Throwable {
+        steps.userEnterDataInTheEmailConfirmationCodeField(econf);
     }
 
     @Then("^Error message Password must not be the same as your username or email is displayed$")
@@ -280,8 +280,8 @@ public class DefinitionSteps {
     }
 
     @And("^User enter data \"([^\"]*)\" to Password field$")
-    public void userEnterDataToPasswordField(String arg0) throws Throwable {
-        steps.userEnterDataToPasswordField(arg0);
+    public void userEnterDataToPasswordField(String pass) throws Throwable {
+        steps.userEnterDataToPasswordField(pass);
     }
 
     @Then("^Message 'Unauthorized' is displayed$")
@@ -350,23 +350,23 @@ public class DefinitionSteps {
     }
 
     @And("^User enter data \"([^\"]*)\" in the 'USE GENERATED PASS' field$")
-    public void userEnterDataInTheUSEGENERATEDPASSField(String arg0) throws Throwable {
-        steps.userEnterDataInTheUSEGENERATEDPASSField(arg0);
+    public void userEnterDataInTheUSEGENERATEDPASSField(String gPass) throws Throwable {
+        steps.userEnterDataInTheUSEGENERATEDPASSField(gPass);
     }
 
     @And("^User enter data \"([^\"]*)\" in the 'Password1' field$")
-    public void userEnterDataInThePasswordField(String arg0) throws Throwable {
-        steps.userEnterDataInThePasswordField(arg0);
+    public void userEnterDataInThePasswordField(String pass1) throws Throwable {
+        steps.userEnterDataInThePasswordField(pass1);
     }
 
     @And("^User enter data \"([^\"]*)\" in the 'Password2' field$")
-    public void userEnterDataInThePassword2Field(String arg0) throws Throwable {
-        steps.userEnterDataInThePassword2Field(arg0);
+    public void userEnterDataInThePassword2Field(String pass2) throws Throwable {
+        steps.userEnterDataInThePassword2Field(pass2);
     }
 
     @Then("^Error \"([^\"]*)\" is displayed$")
-    public void errorIsDisplayed(String arg0) throws Throwable {
-        steps.errorIsDisplayed(arg0);
+    public void errorIsDisplayed(String err) throws Throwable {
+        steps.errorIsDisplayed(err);
     }
 
     @And("^User clicks on the 'USE GENERATED PASS' button$")
@@ -649,14 +649,14 @@ public class DefinitionSteps {
         steps.accountSettingsPageIsOpened();
     }
 
-    @And("^Check that 'Email' field is present$")
+    @And("^Check that 'Email' field AccPage is present$")
     public void checkThatEmailFieldAccPageIsPresent() {
         steps.checkThatEmailFieldAccPageIsPresent();
     }
 
     @And("^Check that 'Email' field contains \"([^\"]*)\"$")
-    public void checkThatEmailFieldContains(String arg0) throws Throwable {
-        steps.checkThatEmailFieldContains(arg0);
+    public void checkThatEmailFieldContains(String email) throws Throwable {
+        steps.checkThatEmailFieldContains(email);
     }
 
     @And("^Check that 'Username' field is present$")
@@ -665,8 +665,8 @@ public class DefinitionSteps {
     }
 
     @And("^Check that 'Username' field contains \"([^\"]*)\"$")
-    public void checkThatUsernameFieldContains(String arg0) throws Throwable {
-        steps.checkThatUsernameFieldContains(arg0);
+    public void checkThatUsernameFieldContains(String uName) throws Throwable {
+        steps.checkThatUsernameFieldContains(uName);
     }
 
     @And("^Check that 'Old password' field is present$")
@@ -770,13 +770,13 @@ public class DefinitionSteps {
     }
 
     @Then("^User enter data \"([^\"]*)\" in the 'First Name' field$")
-    public void userEnterDataInTheFirstNameField(String arg0) throws Throwable {
-        steps.userEnterDataInTheFirstNameField(arg0);
+    public void userEnterDataInTheFirstNameField(String fname) throws Throwable {
+        steps.userEnterDataInTheFirstNameField(fname);
     }
 
     @Then("^User enter data \"([^\"]*)\" in the 'Last Name' field$")
-    public void userEnterDataInTheLastNameField(String arg0) throws Throwable {
-        steps.userEnterDataInTheLastNameField(arg0);
+    public void userEnterDataInTheLastNameField(String lname) throws Throwable {
+        steps.userEnterDataInTheLastNameField(lname);
     }
 
     @Then("^User clicks on the 'Save' button$")
@@ -785,8 +785,8 @@ public class DefinitionSteps {
     }
 
     @Then("^Message \"([^\"]*)\" is displayed$")
-    public void messageIsDisplayed(String arg0) throws Throwable {
-        steps.messageIsDisplayed(arg0);
+    public void messageIsDisplayed(String mess) throws Throwable {
+        steps.messageIsDisplayed(mess);
     }
 
     @Then("^User clicks on the 'Arrow Back'$")
@@ -802,12 +802,28 @@ public class DefinitionSteps {
 
 
     @Then("^Check that entered data \"([^\"]*)\" in the 'First Name' field is saved$")
-    public void checkThatEnteredDataInTheFirstNameFieldIsSaved(String arg0) throws Throwable {
-        steps.checkThatEnteredDataInTheFirstNameFieldIsSaved(arg0);
+    public void checkThatEnteredDataInTheFirstNameFieldIsSaved(String fname) throws Throwable {
+        steps.checkThatEnteredDataInTheFirstNameFieldIsSaved(fname);
     }
 
     @And("^Check that entered data \"([^\"]*)\" in the 'Last Name' field is saved$")
-    public void checkThatEnteredDataInTheLastNameFieldIsSaved(String arg0) throws Throwable {
-        steps.checkThatEnteredDataInTheLastNameFieldIsSaved(arg0);
+    public void checkThatEnteredDataInTheLastNameFieldIsSaved(String lName) throws Throwable {
+        steps.checkThatEnteredDataInTheLastNameFieldIsSaved(lName);
+    }
+
+
+    @Then("^Profile page error message \"([^\"]*)\" is displayed$")
+    public void profilePageErrorMessageIsDisplayed(String error) throws Throwable {
+        steps.profilePageErrorMessageIsDisplayed(error);
+    }
+
+    @And("^Check that 'Email' field is present at the 'Account settings' page$")
+    public void checkThatEmailFieldIsPresentAtTheAccountSettingsPage() {
+        steps.checkThatEmailFieldIsPresentAtTheAccountSettingsPage();
+    }
+
+    @And("^Check that 'SAVE' button is blocked$")
+    public void checkThatSAVEButtonIsBlocked() {
+        steps.checkThatSAVEButtonIsBlocked();
     }
 }

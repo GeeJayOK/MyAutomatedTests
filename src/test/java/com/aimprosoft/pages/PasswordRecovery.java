@@ -50,23 +50,23 @@ public class PasswordRecovery extends PageObject {
         return $(ILocators.USE_CUST_PASS).isCurrentlyEnabled();
     }
 
-    public void userEnterDataInTheUSEGENERATEDPASSField(String arg0) {
+    public void userEnterDataInTheUSEGENERATEDPASSField(String gPass) {
         $(ILocators.GEN_PASS).clear();
-        $(ILocators.GEN_PASS).typeAndTab(arg0);
+        $(ILocators.GEN_PASS).typeAndTab(gPass);
     }
 
-    public void userEnterDataInThePasswordField(String arg0) {
+    public void userEnterDataInThePasswordField(String pass1) {
         $(ILocators.REC_PASS1).clear();
-        $(ILocators.REC_PASS1).typeAndTab(arg0);
+        $(ILocators.REC_PASS1).typeAndTab(pass1);
     }
 
-    public void userEnterDataInThePassword2Field(String arg0) {
+    public void userEnterDataInThePassword2Field(String pass2) {
         $(ILocators.REC_PASS2).clear();
-        $(ILocators.REC_PASS2).typeAndTab(arg0);
+        $(ILocators.REC_PASS2).typeAndTab(pass2);
     }
 
-    public boolean errorIsDisplayed(String arg0) {
-        return $(ILocators.ERROR.replace("$1", arg0)).isVisible();
+    public boolean errorIsDisplayed(String err) {
+        return $(ILocators.ERROR.replace("$1", err)).isVisible();
     }
 
     public void userClicksOnTheUSEGENERATEDPASSButton() {

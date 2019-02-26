@@ -1,7 +1,7 @@
 Feature: Testing of Main page
 
   Scenario: 06.0001 Visual check 'Main' page.
-    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Given User goes to the "https://192.168.217.23/index.html#/login" page
     Then User is on the Authorization page
     When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
     And User clicks on the SIGN IN button
@@ -14,7 +14,7 @@ Feature: Testing of Main page
     And Check that Footer is present
 
   Scenario: 06.0002 Visual check 'Left panel'
-    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Given User goes to the "https://192.168.217.23/index.html#/login" page
     Then User is on the Authorization page
     When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
     And User clicks on the SIGN IN button
@@ -26,7 +26,7 @@ Feature: Testing of Main page
     And Check that 'Navigation panel' is present
 
   Scenario: 06.0003 Visual check 'User menu'
-    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Given User goes to the "https://192.168.217.23/index.html#/login" page
     Then User is on the Authorization page
     When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
     And User clicks on the SIGN IN button
@@ -38,7 +38,7 @@ Feature: Testing of Main page
     And Check that 'Bell' is present
 
   Scenario: 06.0004 Visual check 'Room-list'
-    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Given User goes to the "https://192.168.217.23/index.html#/login" page
     Then User is on the Authorization page
     When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
     And User clicks on the SIGN IN button
@@ -48,7 +48,7 @@ Feature: Testing of Main page
     And Check that 'ADD ROOM' is present
 
   Scenario: 06.0005 Visual check 'Direct-list'
-    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Given User goes to the "https://192.168.217.23/index.html#/login" page
     Then User is on the Authorization page
     When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
     And User clicks on the SIGN IN button
@@ -59,7 +59,7 @@ Feature: Testing of Main page
     And Check that 'General' room is present
 
   Scenario: 06.0006 Visual check 'Navigation panel'
-    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Given User goes to the "https://192.168.217.23/index.html#/login" page
     Then User is on the Authorization page
     When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
     And User clicks on the SIGN IN button
@@ -69,7 +69,7 @@ Feature: Testing of Main page
     And Check that 'Close' button nav panel is present
 
   Scenario: 06.0007 Visual check 'Header'
-    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Given User goes to the "https://192.168.217.23/index.html#/login" page
     Then User is on the Authorization page
     When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
     And User clicks on the SIGN IN button
@@ -79,7 +79,7 @@ Feature: Testing of Main page
     And Check that 'Header control' is present
 
   Scenario: 06.0008 Visual check 'Right panel'
-    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Given User goes to the "https://192.168.217.23/index.html#/login" page
     Then User is on the Authorization page
     When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
     And User clicks on the SIGN IN button
@@ -92,7 +92,7 @@ Feature: Testing of Main page
     And Check that 'Room settings' is present
 
   Scenario: 06.0010 Input text field (visual check)
-    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Given User goes to the "https://192.168.217.23/index.html#/login" page
     Then User is on the Authorization page
     When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
     And User clicks on the SIGN IN button

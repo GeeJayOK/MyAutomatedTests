@@ -17,13 +17,12 @@ public class RegistrationPage1 extends PageObject {
         $(ILocators.SUBMIT_BUTTON).click();
     }
 
-    public void openFirstRegistrationPage(String arg0) {
-        getDriver().get(arg0);
+    public void userGoesToPage(String url) {
+        getDriver().get(url);
     }
 
-    public boolean firstRegistrationPageIsOpened() {
+    public boolean registrationPage1IsOpened() {
         return $(ILocators.TITTLE_RP).isDisplayed();
-        //!!!!!
     }
 
     public boolean checkThatEmailFieldIsPresent() {
@@ -32,7 +31,6 @@ public class RegistrationPage1 extends PageObject {
 
     public boolean submitButtonIsPresent() {
         return $(ILocators.SUBMIT_BUTTON).isCurrentlyEnabled();
-
     }
 
     public boolean cancelButtonIsPresent() {
@@ -60,13 +58,13 @@ public class RegistrationPage1 extends PageObject {
 
     }
 
-    public boolean errorMessageIsDisplayed(String arg0) {
-        return $(ILocators.ERROR_MESS.replace("$1", arg0)).isVisible();
+    public boolean errorMessageIsDisplayed(String error) {
+        return $(ILocators.ERROR_MESS.replace("$1", error)).isVisible();
     }
 
-    public void userEnterDataInTheEmailField(String arg0) {
+    public void userEnterDataInTheEmailField(String email) {
         $(ILocators.EMAIL_FIELD).clear();
-        $(ILocators.EMAIL_FIELD).typeAndTab(arg0);
+        $(ILocators.EMAIL_FIELD).typeAndTab(email);
     }
 
     public boolean checkThatSUBMITButtonIsNotClickable() {

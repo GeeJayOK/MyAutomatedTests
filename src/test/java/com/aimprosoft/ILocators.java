@@ -107,6 +107,7 @@ public interface ILocators {
     String PRF_CHGAVATAR = "//label[contains(@class,'btn btn-default')]";
     String PRF_BACK_ARROW = "//i[contains(text(),'arrow_back')]";
     String PRF_MESS_SUCCESS = "//div[contains(text(),'$1')]";
+    String PRF_ERR_MESS = "//div[@class='text-danger'][contains(text(), '$1')]";
 
     //Account settings page
     String PROFILE_SET = "//div[@class='settings-item active']";
@@ -114,9 +115,7 @@ public interface ILocators {
     String NOTIF_SET = "//div[contains(text(),'Notification settings')]";
     String ACC_SET_PAGE = "//div[contains(text(),'Edit your settings')]";
     String ACC_EMAIL = "//input[@name='email']";
-    String ACC_EMAIL_VAL = "//input[@value='$1']";
     String ACC_USERNAME = "//input[@name='username']";
-    String ACC_USERNAME_VAL = "//input[@value='$1']";
     String ACC_OLD_PASS = "//input[@name='password']";
     String ACC_NEW_PASS = "//input[@name='password2']";
 
@@ -137,5 +136,7 @@ public interface ILocators {
     String NS_MUTE_8H = "//span[contains(text(),'8 hours')]";
     String NS_MUTE_24H = "//span[contains(text(),'24 hours')]";
     String NS_SETTINGS = "//span[contains(@class,'settings')]";
+
+
 
 }

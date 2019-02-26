@@ -25,8 +25,8 @@ public class EndUserSteps {
     ProfilePage profilePage;
 
     @Step
-    public void userGoToThePage(String arg0) {
-        loginPage.getDriver().get(arg0);
+    public void userGoesToThePage(String url) {
+        loginPage.getDriver().get(url);
     }
 
     @Step
@@ -56,13 +56,13 @@ public class EndUserSteps {
     }
 
     @Step
-    public void secondRegistrationPageIsOpened() {
-        assertTrue("Second Registration page is not opened", registrationPage2.secondRegistrationPageIsOpened());
+    public void registrationPage2IsOpened() {
+        assertTrue("Second Registration page is not opened", registrationPage2.registrationPage2IsOpened());
     }
 
     @Step
-    public void userPerformLoginWithEmailAndPassword(String arg0, String arg1, String arg2, String arg3) {
-        loginPage.userPerformLoginWithEmailAndPassword(arg0, arg1, arg2, arg3);
+    public void userPerformLoginWithEmailAndPassword(String email, String pass, String logF, String passF) {
+        loginPage.userPerformLoginWithEmailAndPassword(email, pass, logF, passF);
     }
 
     @Step
@@ -82,13 +82,13 @@ public class EndUserSteps {
     }
 
     @Step
-    public void firstRegistrationPageIsOpen(String arg0) {
-        registrationPage1.openFirstRegistrationPage(arg0);
+    public void userGoesToPage(String url) {
+        registrationPage1.userGoesToPage(url);
     }
 
     @Step
-    public void firstRegistrationPageIsOpened() {
-        registrationPage1.firstRegistrationPageIsOpened();
+    public void registrationPage1IsOpened() {
+        registrationPage1.registrationPage1IsOpened();
     }
 
     @Step
@@ -137,13 +137,13 @@ public class EndUserSteps {
     }
 
     @Step
-    public void errorMessageIsDisplayed(String arg0) {
-        Assert.assertTrue("Error message " + arg0 + " is not displayed!", registrationPage1.errorMessageIsDisplayed(arg0));
+    public void errorMessageIsDisplayed(String error) {
+        Assert.assertTrue("Error message " + error + " is not displayed!", registrationPage1.errorMessageIsDisplayed(error));
     }
 
     @Step
-    public void userEnterDataInTheEmailField(String arg0) {
-        registrationPage1.userEnterDataInTheEmailField(arg0);
+    public void userEnterDataInTheEmailField(String email) {
+        registrationPage1.userEnterDataInTheEmailField(email);
     }
 
     @Step
@@ -179,8 +179,8 @@ public class EndUserSteps {
     }
 
     @Step
-    public void checkThatPasswordOneIsPresent() {
-        Assert.assertTrue("PASS1", registrationPage2.checkThatPasswordOneIsPresent());
+    public void checkThatPassword1IsPresent() {
+        Assert.assertTrue("PASS1", registrationPage2.checkThatPassword1IsPresent());
     }
 
     @Step
@@ -199,18 +199,18 @@ public class EndUserSteps {
     }
 
     @Step
-    public void userEnterDataToLoginField(String arg0) {
-        registrationPage2.userEnterDataToLoginField(arg0);
+    public void userEnterDataToLoginField(String login) {
+        registrationPage2.userEnterDataToLoginField(login);
     }
 
     @Step
-    public void userEnterDataToPasswordOneField(String arg0) {
-        registrationPage2.userEnterDataToPasswordOneField(arg0);
+    public void userEnterDataToPasswordOneField(String pass1) {
+        registrationPage2.userEnterDataToPasswordOneField(pass1);
     }
 
     @Step
-    public void userEnterDataToPasswordTwoField(String arg0) {
-        registrationPage2.userEnterDataToPasswordTwoField(arg0);
+    public void userEnterDataToPasswordTwoField(String pass2) {
+        registrationPage2.userEnterDataToPasswordTwoField(pass2);
     }
 
     @Step
@@ -219,8 +219,8 @@ public class EndUserSteps {
     }
 
     @Step
-    public void userEnterDataInTheEmailConfirmationCodeField(String arg0) {
-        registrationPage2.userEnterDataInTheEmailConfirmationCodeField(arg0);
+    public void userEnterDataInTheEmailConfirmationCodeField(String econf) {
+        registrationPage2.userEnterDataInTheEmailConfirmationCodeField(econf);
     }
 
     @Step
@@ -284,8 +284,8 @@ public class EndUserSteps {
     }
 
     @Step
-    public void userEnterDataToPasswordField(String arg0) {
-        loginPage.userEnterDataToPasswordField(arg0);
+    public void userEnterDataToPasswordField(String pass) {
+        loginPage.userEnterDataToPasswordField(pass);
     }
 
     @Step
@@ -354,23 +354,23 @@ public class EndUserSteps {
     }
 
     @Step
-    public void userEnterDataInTheUSEGENERATEDPASSField(String arg0) {
-        passwordRecovery.userEnterDataInTheUSEGENERATEDPASSField(arg0);
+    public void userEnterDataInTheUSEGENERATEDPASSField(String gPass) {
+        passwordRecovery.userEnterDataInTheUSEGENERATEDPASSField(gPass);
     }
 
     @Step
-    public void userEnterDataInThePasswordField(String arg0) {
-        passwordRecovery.userEnterDataInThePasswordField(arg0);
+    public void userEnterDataInThePasswordField(String pass1) {
+        passwordRecovery.userEnterDataInThePasswordField(pass1);
     }
 
     @Step
-    public void userEnterDataInThePassword2Field(String arg0) {
-        passwordRecovery.userEnterDataInThePassword2Field(arg0);
+    public void userEnterDataInThePassword2Field(String pass2) {
+        passwordRecovery.userEnterDataInThePassword2Field(pass2);
     }
 
     @Step
-    public void errorIsDisplayed(String arg0) {
-        Assert.assertTrue("error Is Not Displayed", passwordRecovery.errorIsDisplayed(arg0));
+    public void errorIsDisplayed(String err) {
+        Assert.assertTrue("error " + err + " Is Not Displayed", passwordRecovery.errorIsDisplayed(err));
     }
 
     @Step
@@ -659,8 +659,8 @@ public class EndUserSteps {
     }
 
     @Step
-    public void checkThatEmailFieldContains(String arg0) {
-        Assert.assertTrue("Email Field Doesn't Contains" + arg0, profilePage.checkThatEmailFieldContains(arg0));
+    public void checkThatEmailFieldContains(String email) {
+        Assert.assertEquals("Email Field Doesn't Contains" + email, email, profilePage.checkThatEmailFieldContains());
     }
 
     @Step
@@ -669,8 +669,8 @@ public class EndUserSteps {
     }
 
     @Step
-    public void checkThatUsernameFieldContains(String arg0) {
-        Assert.assertTrue("Username Field Doesn't Contains" + arg0, profilePage.checkThatUsernameFieldContains(arg0));
+    public void checkThatUsernameFieldContains(String uName) {
+        Assert.assertEquals("Username Field Doesn't Contains" + uName, uName, profilePage.checkThatUsernameFieldContains());
     }
 
     @Step
@@ -774,13 +774,13 @@ public class EndUserSteps {
     }
 
     @Step
-    public void userEnterDataInTheFirstNameField(String arg0) {
-        profilePage.userEnterDataInTheFirstNameField(arg0);
+    public void userEnterDataInTheFirstNameField(String fname) {
+        profilePage.userEnterDataInTheFirstNameField(fname);
     }
 
     @Step
-    public void userEnterDataInTheLastNameField(String arg0) {
-        profilePage.userEnterDataInTheLastNameField(arg0);
+    public void userEnterDataInTheLastNameField(String lname) {
+        profilePage.userEnterDataInTheLastNameField(lname);
     }
 
     @Step
@@ -789,8 +789,8 @@ public class EndUserSteps {
     }
 
     @Step
-    public void messageIsDisplayed(String arg0) {
-        profilePage.messageIsDisplayed(arg0);
+    public void messageIsDisplayed(String mess) {
+        profilePage.messageIsDisplayed(mess);
     }
 
     @Step
@@ -804,12 +804,28 @@ public class EndUserSteps {
     }
 
     @Step
-    public void checkThatEnteredDataInTheFirstNameFieldIsSaved(String arg0) {
-        Assert.assertEquals("Entered Data In The First Name Field Didn't Save", arg0, profilePage.checkThatEnteredDataInTheFirstNameFieldIsSaved());
+    public void checkThatEnteredDataInTheFirstNameFieldIsSaved(String fname) {
+        Assert.assertEquals("Entered Data In The First Name Field Didn't Save", fname, profilePage.checkThatEnteredDataInTheFirstNameFieldIsSaved());
     }
 
     @Step
-    public void checkThatEnteredDataInTheLastNameFieldIsSaved(String arg0) {
-        Assert.assertEquals("Entered Data In The Last Name Field Didin't Save", arg0, profilePage.checkThatEnteredDataInTheLastNameFieldIsSaved());
+    public void checkThatEnteredDataInTheLastNameFieldIsSaved(String lName) {
+        Assert.assertEquals("Entered Data In The Last Name Field Didn't Save", lName, profilePage.checkThatEnteredDataInTheLastNameFieldIsSaved());
+    }
+
+    @Step
+    public void profilePageErrorMessageIsDisplayed(String error) {
+        Assert.assertTrue("profile Page Error Message Is Not Displayed", profilePage.profilePageErrorMessageIsDisplayed(error));
+
+    }
+
+    @Step
+    public void checkThatEmailFieldIsPresentAtTheAccountSettingsPage() {
+        Assert.assertTrue("Email Field Is Not Present At The Account Settings Page", profilePage.checkThatEmailFieldIsPresentAtTheAccountSettingsPage());
+    }
+
+    @Step
+    public void checkThatSAVEButtonIsBlocked() {
+        Assert.assertFalse("SAVE Button Is Available", profilePage.checkThatSAVEButtonIsBlocked());
     }
 }

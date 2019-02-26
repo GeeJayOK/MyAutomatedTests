@@ -1,7 +1,7 @@
 Feature: Testing of User Menu page
 
   Scenario: 07.0001 Check drop-down user menu
-    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Given User goes to the "https://192.168.217.23/index.html#/login" page
     Then User is on the Authorization page
     When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
     And User clicks on the SIGN IN button
@@ -14,7 +14,7 @@ Feature: Testing of User Menu page
     And Check that 'Download App' button is present
 
   Scenario: 07.0002 Check 'Profile' item in drop-down user menu
-    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Given User goes to the "https://192.168.217.23/index.html#/login" page
     Then User is on the Authorization page
     When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
     And User clicks on the SIGN IN button
@@ -38,7 +38,7 @@ Feature: Testing of User Menu page
     And Check that 'Save' button is present
 
   Scenario: 07.0003 Check 'Account settings' item in 'Left panel'
-    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Given User goes to the "https://192.168.217.23/index.html#/login" page
     Then User is on the Authorization page
     When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
     And User clicks on the SIGN IN button
@@ -49,7 +49,7 @@ Feature: Testing of User Menu page
     Then 'Profile' page is opened
     And User clicks on the 'Account settings' item
     Then 'Account settings' page is opened
-    And Check that 'Email' field is present
+    And Check that 'Email' field is present at the 'Account settings' page
     And Check that 'Email' field contains "ya.getalo@aimprosoft.com"
     And Check that 'Username' field is present
     And Check that 'Username' field contains "qwer_"
@@ -57,7 +57,7 @@ Feature: Testing of User Menu page
     And Check that 'New password' field is present
 
   Scenario: 07.0004 Check 'Notification settings' item in 'Left panel'
-    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Given User goes to the "https://192.168.217.23/index.html#/login" page
     Then User is on the Authorization page
     When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
     And User clicks on the SIGN IN button
@@ -75,7 +75,7 @@ Feature: Testing of User Menu page
     And Check that 'Marking messages as read' item is present
 
   Scenario: 07.0005 Check 'Sign out' item in drop-down user menu
-    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Given User goes to the "https://192.168.217.23/index.html#/login" page
     Then User is on the Authorization page
     When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
     And User clicks on the SIGN IN button
@@ -86,7 +86,7 @@ Feature: Testing of User Menu page
     Then Authorization page is opened
 
   Scenario: 07.0008 Check dropdown menu 'The Bell' icon
-    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Given User goes to the "https://192.168.217.23/index.html#/login" page
     Then User is on the Authorization page
     When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
     And User clicks on the SIGN IN button
@@ -103,7 +103,7 @@ Feature: Testing of User Menu page
     And Check that 'Notification settings' item is present
 
   Scenario: 07.0017 Checking functionality of the 'Notification settings' item.
-    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Given User goes to the "https://192.168.217.23/index.html#/login" page
     Then User is on the Authorization page
     When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
     And User clicks on the SIGN IN button
@@ -114,7 +114,7 @@ Feature: Testing of User Menu page
     Then 'Notification settings' page is opened
 
   Scenario: 07.0018 Check that  fields 'First Name:'/'Last Name:' are accept valid data.
-    Given User go to the "https://192.168.217.23/index.html#/login" page
+    Given User goes to the "https://192.168.217.23/index.html#/login" page
     Then User is on the Authorization page
     When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
     And User clicks on the SIGN IN button
@@ -131,3 +131,17 @@ Feature: Testing of User Menu page
     And Wait for loader
     Then Check that entered data "John" in the 'First Name' field is saved
     And  Check that entered data "Smith" in the 'Last Name' field is saved
+
+  Scenario: 07.0019 Check that 'First Name:' field is not accept invalid data (2 characters).
+    Given User goes to the "https://192.168.217.23/index.html#/login" page
+    Then User is on the Authorization page
+    When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
+    And User clicks on the SIGN IN button
+    And Wait for loader
+    Then Authorization is successful
+    Then User clicks on the 'User menu'
+    And  User clicks on the 'Profile' button
+    Then 'Profile' page is opened
+    And User enter data "Qw" in the 'First Name' field
+    Then Profile page error message "Should be 3 characters or more." is displayed
+    And Check that 'SAVE' button is blocked

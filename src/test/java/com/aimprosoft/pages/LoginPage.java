@@ -13,16 +13,15 @@ public class LoginPage extends PageObject {
         return $(ILocators.REG_FORM_TITLE).isVisible();
     }
 
-    public void userPerformLoginWithEmailAndPassword(String arg0, String arg1, String arg2, String arg3) {
-        $(ILocators.LOGIN_FORM_INPUT_FIELDS.replace("$1", arg2)).clear();
-        $(ILocators.LOGIN_FORM_INPUT_FIELDS.replace("$1", arg2)).sendKeys(arg0);
-        $(ILocators.LOGIN_FORM_INPUT_FIELDS.replace("$1", arg3)).clear();
-        $(ILocators.LOGIN_FORM_INPUT_FIELDS.replace("$1", arg3)).sendKeys(arg1);
+    public void userPerformLoginWithEmailAndPassword(String email, String pass, String logF, String passF) {
+        $(ILocators.LOGIN_FORM_INPUT_FIELDS.replace("$1", logF)).clear();
+        $(ILocators.LOGIN_FORM_INPUT_FIELDS.replace("$1", logF)).sendKeys(email);
+        $(ILocators.LOGIN_FORM_INPUT_FIELDS.replace("$1", passF)).clear();
+        $(ILocators.LOGIN_FORM_INPUT_FIELDS.replace("$1", passF)).sendKeys(pass);
     }
 
     public void userClicksOnTheSIGNINButton() {
         $(ILocators.SIGN_IN).click();
-
     }
 
     public boolean teamNameChatIsPresent() {
@@ -73,9 +72,9 @@ public class LoginPage extends PageObject {
         return $(ILocators.SIGN_IN).isCurrentlyEnabled();
     }
 
-    public void userEnterDataToPasswordField(String arg0) {
+    public void userEnterDataToPasswordField(String pass) {
         $(ILocators.PASS).clear();
-        $(ILocators.PASS).typeAndTab(arg0);
+        $(ILocators.PASS).typeAndTab(pass);
     }
 
     public boolean messageUnauthorizedIsDisplayed() {

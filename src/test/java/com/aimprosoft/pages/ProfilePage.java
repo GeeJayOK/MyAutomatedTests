@@ -78,16 +78,16 @@ public class ProfilePage extends PageObject {
         return $(ILocators.ACC_EMAIL).isDisplayed();
     }
 
-    public boolean checkThatEmailFieldContains(String arg0) {
-        return $(ILocators.ACC_EMAIL_VAL.replace("$1", arg0)).isDisplayed();
+    public String checkThatEmailFieldContains() {
+        return $(ILocators.ACC_EMAIL).getAttribute("value");
     }
 
     public boolean checkThatUsernameFieldIsPresent() {
         return $(ILocators.ACC_USERNAME).isDisplayed();
     }
 
-    public boolean checkThatUsernameFieldContains(String arg0) {
-        return $(ILocators.ACC_USERNAME_VAL.replace("$1", arg0)).isDisplayed();
+    public String checkThatUsernameFieldContains() {
+        return $(ILocators.ACC_USERNAME).getAttribute("value");
     }
 
     public boolean checkThatOldPasswordFieldIsPresent() {
@@ -171,22 +171,22 @@ public class ProfilePage extends PageObject {
         $(ILocators.NS_SETTINGS).click();
     }
 
-    public void userEnterDataInTheFirstNameField(String arg0) {
+    public void userEnterDataInTheFirstNameField(String fname) {
         $(ILocators.PRF_FIRST_NAME).clear();
-        $(ILocators.PRF_FIRST_NAME).sendKeys(arg0);
+        $(ILocators.PRF_FIRST_NAME).typeAndTab(fname);
     }
 
-    public void userEnterDataInTheLastNameField(String arg0) {
+    public void userEnterDataInTheLastNameField(String lname) {
         $(ILocators.PRF_LAST_NAME).clear();
-        $(ILocators.PRF_LAST_NAME).sendKeys(arg0);
+        $(ILocators.PRF_LAST_NAME).typeAndTab(lname);
     }
 
     public void userClicksOnTheSaveButton() {
         $(ILocators.PRF_SAVE).click();
     }
 
-    public void messageIsDisplayed(String arg0) {
-        $(ILocators.PRF_MESS_SUCCESS.replace("$1", arg0)).isDisplayed();
+    public void messageIsDisplayed(String mess) {
+        $(ILocators.PRF_MESS_SUCCESS.replace("$1", mess)).isDisplayed();
     }
 
     public void userClicksOnTheArrowBack() {
@@ -203,5 +203,17 @@ public class ProfilePage extends PageObject {
 
     public String checkThatEnteredDataInTheLastNameFieldIsSaved() {
         return $(ILocators.PRF_LAST_NAME).getAttribute("value");
+    }
+
+    public boolean profilePageErrorMessageIsDisplayed(String error) {
+        return $(ILocators.PRF_ERR_MESS.replace("$1", error)).isDisplayed();
+    }
+
+    public boolean checkThatEmailFieldIsPresentAtTheAccountSettingsPage() {
+        return $(ILocators.ACC_EMAIL).isDisplayed();
+    }
+
+    public boolean checkThatSAVEButtonIsBlocked() {
+        return $(ILocators.PRF_SAVE).isCurrentlyEnabled();
     }
 }

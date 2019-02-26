@@ -2,12 +2,11 @@ package com.aimprosoft.pages;
 
 import com.aimprosoft.ILocators;
 import net.thucydides.core.pages.PageObject;
-import org.openqa.selenium.By;
 
 
 public class RegistrationPage2 extends PageObject {
 
-    public boolean secondRegistrationPageIsOpened() {
+    public boolean registrationPage2IsOpened() {
         return $(ILocators.CONF_CODE_TXT).isVisible();
     }
 
@@ -28,9 +27,8 @@ public class RegistrationPage2 extends PageObject {
         return $(ILocators.LOGIN).isVisible();
     }
 
-    public boolean checkThatPasswordOneIsPresent() {
+    public boolean checkThatPassword1IsPresent() {
         return $(ILocators.PASS1).isVisible();
-
     }
 
     public boolean checkThatPasswordTwoIsPresent() {
@@ -50,28 +48,24 @@ public class RegistrationPage2 extends PageObject {
     }
 
 
-    public void userEnterDataToLoginField(String arg0) {
+    public void userEnterDataToLoginField(String login) {
         $(ILocators.LOGIN).clear();
-        $(ILocators.LOGIN).typeAndTab(arg0);
+        $(ILocators.LOGIN).typeAndTab(login);
     }
 
-    public void userEnterDataToPasswordOneField(String arg0) {
+    public void userEnterDataToPasswordOneField(String pass1) {
         $(ILocators.PASS1).clear();
-        $(ILocators.PASS1).typeAndTab(arg0);
+        $(ILocators.PASS1).typeAndTab(pass1);
     }
 
-    public void userEnterDataToPasswordTwoField(String arg0) {
+    public void userEnterDataToPasswordTwoField(String pass2) {
         $(ILocators.PASS2).clear();
-        $(ILocators.PASS2).typeAndTab(arg0);
+        $(ILocators.PASS2).typeAndTab(pass2);
     }
 
-    public void userClicksOnTheSubmitButton() {
-        $(ILocators.SUBMIT_BUTTON).click();
-    }
-
-    public void userEnterDataInTheEmailConfirmationCodeField(String arg0) {
+    public void userEnterDataInTheEmailConfirmationCodeField(String econf) {
         $(ILocators.CONF_CODE).clear();
-        $(ILocators.CONF_CODE).typeAndTab(arg0);
+        $(ILocators.CONF_CODE).typeAndTab(econf);
     }
 
     public boolean errorMessagePasswordMustNotBeTheSameAsYourUsernameOrEmailIsDisplayed() {
