@@ -216,4 +216,31 @@ public class ProfilePage extends PageObject {
     public boolean checkThatSAVEButtonIsBlocked() {
         return $(ILocators.PRF_SAVE).isCurrentlyEnabled();
     }
+
+    public void userEnterDataInThePhoneNumberField(String phone) {
+        $(ILocators.PRF_PHONE).clear();
+        $(ILocators.PRF_PHONE).typeAndTab(phone);
+    }
+
+    public String checkThatEnteredDataInThePhoneNumberFieldIsSaved() {
+        return $(ILocators.PRF_PHONE).getAttribute("value");
+    }
+
+    public void userEnterDataInTheSkypeField(String skype) {
+        $(ILocators.PRF_SKYPE).clear();
+        $(ILocators.PRF_SKYPE).typeAndTab(skype);
+    }
+
+    public String checkThatEnteredDataInTheSkypeFieldIsSaved() {
+        return $(ILocators.PRF_SKYPE).getAttribute("value");
+    }
+
+    public void userEnterDataInTheWhatIDoField(String whIdo) {
+        $(ILocators.PRF_WHTIDO).clear();
+        $(ILocators.PRF_WHTIDO).typeAndTab(whIdo);
+    }
+
+    public String checkThatEnteredDataInTheWhatIDoFieldIsSaved(String whIdo) {
+        return $(ILocators.PRF_WHTIDO).getAttribute("value");
+    }
 }

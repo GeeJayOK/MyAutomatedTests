@@ -816,7 +816,6 @@ public class EndUserSteps {
     @Step
     public void profilePageErrorMessageIsDisplayed(String error) {
         Assert.assertTrue("profile Page Error Message Is Not Displayed", profilePage.profilePageErrorMessageIsDisplayed(error));
-
     }
 
     @Step
@@ -827,5 +826,35 @@ public class EndUserSteps {
     @Step
     public void checkThatSAVEButtonIsBlocked() {
         Assert.assertFalse("SAVE Button Is Available", profilePage.checkThatSAVEButtonIsBlocked());
+    }
+
+    @Step
+    public void userEnterDataInThePhoneNumberField(String phone) {
+        profilePage.userEnterDataInThePhoneNumberField(phone);
+    }
+
+    @Step
+    public void checkThatEnteredDataInThePhoneNumberFieldIsSaved(String phone) {
+        Assert.assertEquals("Entered Data In The Phone Number Field Is Not Saved", phone, profilePage.checkThatEnteredDataInThePhoneNumberFieldIsSaved());
+    }
+
+    @Step
+    public void userEnterDataInTheSkypeField(String skype) {
+        profilePage.userEnterDataInTheSkypeField(skype);
+    }
+
+    @Step
+    public void checkThatEnteredDataInTheSkypeFieldIsSaved(String skype) {
+        Assert.assertEquals("Entered Data In The Skype Field Is Not Saved", skype, profilePage.checkThatEnteredDataInTheSkypeFieldIsSaved());
+    }
+
+    @Step
+    public void userEnterDataInTheWhatIDoField(String whIdo) {
+        profilePage.userEnterDataInTheWhatIDoField(whIdo);
+    }
+
+    @Step
+    public void checkThatEnteredDataInTheWhatIDoFieldIsSaved(String whIdo) {
+        Assert.assertEquals("Entered Data In The What I Do Field Is Not Saved", whIdo, profilePage.checkThatEnteredDataInTheWhatIDoFieldIsSaved(whIdo));
     }
 }

@@ -71,11 +71,6 @@ public class DefinitionSteps {
         steps.waitForLoader();
     }
 
-    /*@Given("^user go to Registration page one \"([^\"]*)\"$")
-    public void userGoToRegistrationPageOne(String arg0) throws Throwable {
-        steps.registrationPage1IsOpened();
-    }*/
-
     @Given("^User goes to \"([^\"]*)\" page$")
     public void userGoesToPage(String url) throws Throwable {
         steps.userGoesToPage(url);
@@ -825,5 +820,36 @@ public class DefinitionSteps {
     @And("^Check that 'SAVE' button is blocked$")
     public void checkThatSAVEButtonIsBlocked() {
         steps.checkThatSAVEButtonIsBlocked();
+    }
+
+    @And("^User enter data \"([^\"]*)\" in the 'Phone number' field$")
+    public void userEnterDataInThePhoneNumberField(String phone) throws Throwable {
+        steps.userEnterDataInThePhoneNumberField(phone);
+
+    }
+
+    @Then("^Check that entered data \"([^\"]*)\" in the 'Phone number' field is saved$")
+    public void checkThatEnteredDataInThePhoneNumberFieldIsSaved(String phone) throws Throwable {
+        steps.checkThatEnteredDataInThePhoneNumberFieldIsSaved(phone);
+    }
+
+    @And("^User enter data \"([^\"]*)\" in the 'Skype' field$")
+    public void userEnterDataInTheSkypeField(String skype) throws Throwable {
+        steps.userEnterDataInTheSkypeField(skype);
+    }
+
+    @Then("^Check that entered data \"([^\"]*)\" in the 'Skype' field is saved$")
+    public void checkThatEnteredDataInTheSkypeFieldIsSaved(String skype) throws Throwable {
+        steps.checkThatEnteredDataInTheSkypeFieldIsSaved(skype);
+    }
+
+    @And("^User enter data \"([^\"]*)\" in the 'What I do' field$")
+    public void userEnterDataInTheWhatIDoField(String whIdo) throws Throwable {
+        steps.userEnterDataInTheWhatIDoField(whIdo);
+    }
+
+    @Then("^Check that entered data \"([^\"]*)\" in the 'What I do' field is saved$")
+    public void checkThatEnteredDataInTheWhatIDoFieldIsSaved(String whIdo) throws Throwable {
+        steps.checkThatEnteredDataInTheWhatIDoFieldIsSaved(whIdo);
     }
 }
