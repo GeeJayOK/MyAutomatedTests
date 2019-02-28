@@ -659,3 +659,17 @@ Feature: Testing of User Menu page
     And User enter data "Я пишу тест-кейсы" in the 'What I do' field
     Then Profile page error message "Must start with a (A-Za-z)..." is displayed
     And Check that 'SAVE' button is blocked
+
+
+
+  Scenario: 07.9999 - Clear all fields
+    Given User goes to the "https://192.168.217.23/index.html#/login" page
+    Then User is on the Authorization page
+    When User perform login with "ya.getalo@aimprosoft.com" email and "qk180t56732i" password in the "login" and "password"
+    And User clicks on the SIGN IN button
+    And Wait for loader
+    Then Authorization is successful
+    Then User clicks on the 'User menu'
+    And  User clicks on the 'Profile' button
+    Then 'Profile' page is opened
+    Then Clear all fields 'Profile' page

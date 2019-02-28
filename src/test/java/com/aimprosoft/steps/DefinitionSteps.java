@@ -852,4 +852,9 @@ public class DefinitionSteps {
     public void checkThatEnteredDataInTheWhatIDoFieldIsSaved(String whIdo) throws Throwable {
         steps.checkThatEnteredDataInTheWhatIDoFieldIsSaved(whIdo);
     }
+
+    @Then("^Clear all fields 'Profile' page$")
+    public void clearAllFieldsProfilePage() {
+        steps.clearAllFieldsProfilePage();
+    }
 }

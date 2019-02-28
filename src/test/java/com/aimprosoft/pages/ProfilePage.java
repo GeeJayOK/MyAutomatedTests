@@ -243,4 +243,14 @@ public class ProfilePage extends PageObject {
     public String checkThatEnteredDataInTheWhatIDoFieldIsSaved(String whIdo) {
         return $(ILocators.PRF_WHTIDO).getAttribute("value");
     }
+
+    public void clearAllFieldsProfilePage() {
+        $(ILocators.PRF_FIRST_NAME).clear();
+        $(ILocators.PRF_LAST_NAME).clear();
+        $(ILocators.PRF_PHONE).clear();
+        $(ILocators.PRF_SKYPE).clear();
+        $(ILocators.PRF_WHTIDO).clear();
+        $(ILocators.PRF_WHRIM).clear();
+        $(ILocators.PRF_SAVE).click();
+    }
 }

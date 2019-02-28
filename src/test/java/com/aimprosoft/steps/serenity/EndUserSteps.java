@@ -857,4 +857,8 @@ public class EndUserSteps {
     public void checkThatEnteredDataInTheWhatIDoFieldIsSaved(String whIdo) {
         Assert.assertEquals("Entered Data In The What I Do Field Is Not Saved", whIdo, profilePage.checkThatEnteredDataInTheWhatIDoFieldIsSaved(whIdo));
     }
+
+    public void clearAllFieldsProfilePage() {
+        profilePage.clearAllFieldsProfilePage();
+    }
 }
